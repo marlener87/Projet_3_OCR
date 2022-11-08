@@ -1,0 +1,12 @@
+@import "header.scss";
+
+
+$color-blue: red;
+
+html, body {
+    background: $color-blue;
+}
+
+p {
+    color: aqua;
+}
