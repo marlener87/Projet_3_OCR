@@ -1,0 +1,15 @@
+$color-purple: #9356DC;
+$color-pink: #ff79da;
+$color-green: #99e2d0;
+$color-grey-light: #f2f2f2;
+$color-grey: rgb(77, 76, 76);
+
+
+/*html, body {
+    background: $color-blue;
+}*/
+
+.form_conteneur, .recherche {
+    background: $color-grey-light;
+    color: $color-grey;
+}
