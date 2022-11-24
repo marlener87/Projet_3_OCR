@@ -322,6 +322,18 @@ template {
   background-color: #f7f7f7;
 }
 
+.description {
+  background-color: #fff;
+}
+
+.header-container__button {
+  color: #fff;
+}
+
+.resto-card {
+  color: #000;
+}
+
 .fa-solid {
   color: #353535;
 }
@@ -331,17 +343,17 @@ template {
 }
 .card-function__nb {
   background-color: #9356DC;
-  color: white;
+  color: #fff;
 }
 
 .footer {
   background-color: #353535;
 }
 .footer .footer-list__lien {
-  color: white;
+  color: #fff;
 }
 .footer .fa-footer {
-  color: white;
+  color: #fff;
 }
 .footer .fa-handshake {
   font-size: 11px;
@@ -351,6 +363,12 @@ template {
 .navbar {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   margin-bottom: 5px;
+}
+.navbar--arrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 20px;
 }
 .navbar__container {
   display: flex;
@@ -404,7 +422,6 @@ template {
 }
 .header-container__button {
   background-color: purple;
-  color: white;
   height: 50px;
   border-radius: 25px;
   font-size: 17px;
@@ -452,7 +469,6 @@ template {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   box-sizing: border-box;*/
   text-decoration: none;
-  color: black;
 }
 .section-restos .resto-card__img {
   height: 240px;
@@ -483,7 +499,8 @@ template {
 .section-restos .resto-card .resto--strong {
   font-weight: 800;
 }
-.section-restos .resto-card .fa-heart {
+
+.fa-heart {
   font-size: 35px;
 }
 
@@ -508,6 +525,73 @@ template {
   padding-left: 5px;
 }
 
+.fa-arrow-left {
+  font-size: 20px;
+}
+
+.resto-container__imgResto {
+  width: 100%;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.card-menu__title {
+  font-weight: 300;
+}
+
+.description {
+  border-radius: 20px;
+  padding: 15px;
+  margin: 10px 0;
+}
+.description__title {
+  margin: 0;
+  font-size: 20px;
+}
+.description__entitled {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+.description__entitled__text, .description__entitled__price {
+  margin: 5px 0;
+}
+.description__entitled__price {
+  font-weight: 700;
+}
+
+/*
+.card-function {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    border-radius: 20px;
+    margin: 20px 0;
+
+    &__nb {
+        border-radius: 50%;
+        padding: 10px; 
+        height: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        font-weight: 600;
+        padding: 10px;
+    }
+
+    .fa-solid {
+        padding: 20px;
+        font-size: 20px;
+    }
+}*/
 .body {
   font-family: "Roboto", sans-serif;
 }

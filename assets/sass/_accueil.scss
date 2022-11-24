@@ -3,6 +3,14 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
     margin-bottom: 5px;
 
+    &--arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 20px;
+  
+    }
+
     &__container {
         display: flex;
         justify-content: center;
@@ -62,7 +70,6 @@
 
         &__button {
             background-color: purple;
-            color: white;
             height: 50px;
             border-radius: 25px;
             font-size: 17px;
@@ -115,7 +122,6 @@
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         box-sizing: border-box;*/
         text-decoration: none;
-        color: black;
 
         &__img {
             height: 240px;
@@ -151,12 +157,13 @@
             }
         }
 
-        .fa-heart {
-            font-size: 35px;
-        }
+        
     }      
 }
 
+.fa-heart {
+    font-size: 35px;
+}
 
 
 

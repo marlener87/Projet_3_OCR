@@ -1,0 +1,72 @@
+
+
+.fa-arrow-left {
+    font-size: 20px;
+}
+
+.resto-container__imgResto {
+    width: 100%;
+    }
+
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.card-menu__title {
+    font-weight: 300;
+}
+
+.description {
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px 0;
+
+    &__title {
+        margin: 0;
+        font-size: 20px;
+    }
+    &__entitled {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        border-radius: 20px;
+
+        &__text, &__price {
+            margin: 5px 0;
+        }
+
+        &__price {
+            font-weight: 700;
+        }
+
+    }
+}
+/*
+.card-function {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    border-radius: 20px;
+    margin: 20px 0;
+
+    &__nb {
+        border-radius: 50%;
+        padding: 10px; 
+        height: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        font-weight: 600;
+        padding: 10px;
+    }
+
+    .fa-solid {
+        padding: 20px;
+        font-size: 20px;
+    }
+}*/
