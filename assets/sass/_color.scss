@@ -1,15 +1,55 @@
 $color-purple: #9356DC;
 $color-pink: #ff79da;
 $color-green: #99e2d0;
-$color-grey-light: #f2f2f2;
-$color-grey: rgb(77, 76, 76);
+$color-grey-light: #eaeaea;
+$color-grey-very-light: #f7f7f7;
+$color-grey: #353535;
+$color-white: white;
 
 
 /*html, body {
     background: $color-blue;
 }*/
 
-.form_conteneur, .recherche {
+.localisation {
     background: $color-grey-light;
     color: $color-grey;
 }
+
+.header-container, .section-restos {
+    background-color: $color-grey-very-light;
+}
+
+  
+
+.fa-solid {
+    color: $color-grey;
+}
+
+.card-function {
+    background-color: $color-grey-very-light;
+
+    &__nb {
+        background-color: $color-purple;
+        color: $color-white;
+    }
+}
+
+
+
+.footer {
+    background-color: $color-grey;
+
+    .footer-list__lien {
+        color: $color-white;
+    }
+
+    .fa-footer {
+        color: $color-white;
+    }
+
+    .fa-handshake {
+        font-size: 11px;
+    }
+}
+

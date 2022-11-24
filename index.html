@@ -18,12 +18,12 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="navbar__container">
-            <img class="container__logo" src="assets/images/logo/ohmyfood.png" alt="logo">
+            <img class="navbar__logo" src="assets/images/logo/ohmyfood.png" alt="logo">
         </div>
     </nav>
 
     <!-- HEADER -->
-    <header class="header">
+    <header class="page-header">
         <div class="localisation">
             <div class="localisation__img">
                 <i class="fa-sharp fa-solid fa-location-dot"></i>
@@ -32,121 +32,133 @@
             <!--<p class="localisation__title localisation__title--color1">Nîmes</p>-->
         </div>
 
-        <h1 class="header__title">Réservez le menu qui vous convient</h1>
-        <p class="header__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <button class="header__button">Explorer nos restaurants</button>
+        <div class="header-container">
+            <h1 class="header-container__title">Réservez le menu qui vous convient</h1>
+            <p class="header-container__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <button class="header-container__button">Explorer nos restaurants</button>
+        </div>
     </header>
 
     <!-- SECTION FONCTIONNEMENT -->
     <main class="main">
         <div class="main__sections">
-            <section class="section__functioning">
+            <section class="section-functioning">
                 <h2 class="functioning__title">Fonctionnement</h2>
                 <div class="functioning__cards">
-                    <div class="card__function">
-                        <div class="function__nb">
+                    <div class="card-function">
+                        <div class="card-function__nb">
                             <p class="nb__ofFunction">1</p>
                         </div>
                         <i class="fa-solid fa-mobile-screen-button"></i>
-                        <p class="function__text">Choisissez un restaurant</p>
+                        <p class="card-function__text">Choisissez un restaurant</p>
                     </div>
-                    <div class="card__function">
-                        <div class="function__nb">
+                    <div class="card-function">
+                        <div class="card-function__nb">
                             <p class="nb__ofFunction">2</p>
                         </div>
                         <i class="fa-solid fa-bars"></i>
-                        <p class="function__text">Composez votre menu</p>
+                        <p class="card-function__text">Composez votre menu</p>
                     </div>
-                    <div class="card__function">
-                        <div class="function__nb">
+                    <div class="card-function">
+                        <div class="card-function__nb">
                             <p class="nb__ofFunction">3</p>
                         </div>
                         <i class="fa-sharp fa-solid fa-store"></i>
-                        <p class="function__text">Dégustez au restaurant</p>
+                        <p class="card-function__text">Dégustez au restaurant</p>
                     </div>
                 </div>
             </section>
 
             <!-- SECTION RESTAURANTS-->
-            <section class="section__restos">
+            <section class="section-restos">
                 <h2 class="restos__title">Restaurants</h2>
                 <div class="restos__cards">
                     <!-- resto 1 -->
-                    <a href="la_palette_du_gout.html" class="resto__card lien">
-                        <div class="card__img">
-                            <img class="img__resto"
-                                src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                                alt="Ménilmontant" />
+                    <a href="la_palette_du_gout.html" class="resto-card lien">
+                        <div class="resto-card__img">
                             <div class="nouveau">
                                 <p class="nouveau__text">Nouveau</p>
                             </div>
+                            <img class="resto-card__img__resto"
+                                src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                alt="Ménilmontant" />
                         </div>
-                        <div class="card__body">
-                            <div class="body__nomResto">
-                                <p class="resto resto--strong">La palette du goût</p>
+                        <div class="resto-card__body">
+                            <div class="resto-card__body__lieu">
+                                <div class="card__body__nomResto">
+                                    <p class="resto resto--strong">La palette du goût</p>
+                                </div>
+                                <div class="card__body__lieuResto">
+                                    <p class="resto">Ménilmontant</p>
+                                </div>
                             </div>
-                            <div class="body__lieuResto">
-                                <p class="resto">Ménilmontant</p>
-                            </div>
-                            <div class="body__starResto">
+                            <div class="resto-card__body__starResto">
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                         </div>
                     </a>
                     <!-- resto 2 -->
-                    <a href="la_note_enchantee.html" class="resto__card lien">
-                        <div class="card__img">
-                            <img class="img__resto" src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                                alt="Charonne" />
+                    <a href="la_note_enchantee.html" class="resto-card lien">
+                        <div class="resto-card__img">
                             <div class="nouveau">
                                 <p class="nouveau__text">Nouveau</p>
                             </div>
+                            <img class="resto-card__img__resto"
+                                src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                                alt="Charonne" />
                         </div>
-                        <div class="card__body">
-                            <div class="body__nomResto">
-                                <p class="resto resto--strong">La note enchantée</p>
+                        <div class="resto-card__body">
+                            <div class="resto-card__body__lieu">
+                                <div class="card__body__nomResto">
+                                    <p class="resto resto--strong">La note enchantée</p>
+                                </div>
+                                <div class="card__body__lieuResto">
+                                    <p class="resto">Charonne</p>
+                                </div>
                             </div>
-                            <div class="body__lieuResto">
-                                <p class="resto">Charonne</p>
-                            </div>
-                            <div class="body__starResto">
+                            <div class="resto-card__body__starResto">
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                         </div>
                     </a>
                     <!-- resto 3 -->
-                    <a href="a_la_francaise.html" class="resto__card lien">
-                        <div class="card__img">
-                            <img class="img__resto" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                    <a href="a_la_francaise.html" class="resto-card lien">
+                        <div class="resto-card__img">
+                            <img class="resto-card__img__resto"
+                                src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                                 alt="Cité Rouge" />
                         </div>
-                        <div class="card__body">
-                            <div class="body__nomResto">
-                                <p class="resto resto--strong">A la française</p>
+                        <div class="resto-card__body">
+                            <div class="resto-card__body__lieu">
+                                <div class="card__body__nomResto">
+                                    <p class="resto resto--strong">A la française</p>
+                                </div>
+                                <div class="card__body__lieuResto">
+                                    <p class="resto">Cité Rouge</p>
+                                </div>
                             </div>
-                            <div class="body__lieuResto">
-                                <p class="resto">Cité Rouge</p>
-                            </div>
-                            <div class="body__starResto">
+                            <div class="resto-card__body__starResto">
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                         </div>
                     </a>
                     <!-- resto 4 -->
-                    <a href="le_delice_des_sens.html" class="resto__card lien">
-                        <div class="card__img">
-                            <img class="img__resto"
+                    <a href="le_delice_des_sens.html" class="resto-card lien">
+                        <div class="resto-card__img">
+                            <img class="resto-card__img__resto"
                                 src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                                 alt="Folie-Méricourt" />
                         </div>
-                        <div class="card__body">
-                            <div class="body__nomResto">
-                                <p class="resto resto--strong">Le délice des sens</p>
+                        <div class="resto-card__body">
+                            <div class="resto-card__body__lieu">
+                                <div class="card__body__nomResto">
+                                    <p class="resto resto--strong">Le délice des sens</p>
+                                </div>
+                                <div class="card__body__lieuResto">
+                                    <p class="resto">Folie-Méricourt</p>
+                                </div>
                             </div>
-                            <div class="body__lieuResto">
-                                <p class="resto">Folie-Méricourt</p>
-                            </div>
-                            <div class="body__starResto">
+                            <div class="resto-card__body__starResto">
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                         </div>
@@ -158,17 +170,26 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer__container">
-            <img class="container__logo" src="assets/images/logo/ohmyfood.png" alt="logo">
+        <div class="footer-container">
+            <img class="footer-container__logo" src="assets/images/logo/ohmyfood.png" alt="logo">
+        
+            <ul class="footer-list">
+                <li class="footer-list__item">
+                    <i class="fa-solid fa-utensils fa-footer"></i>
+                    <a class="footer-list__lien footer-list__lien--espace" href="#">Proposer un restaurant</a>
+                </li>
+                <li class="footer-list__item">
+                    <i class="fa-regular fa-handshake fa-footer"></i>
+                    <a class="footer-list__lien footer-list__lien--espace" href="#">Devenir partenaire</a>
+                </li>
+                <li class="footer-list__item">
+                    <a class="footer-list__lien" href="#">Mentions légales</a>
+                </li>
+                <li class="footer-list__item">
+                    <a class="footer-list__lien" href="#">Contact</a>
+                </li>
+            </ul>
         </div>
-        <ul class="footer__list">
-            <li class="list__item"><a class="item__lien" href="#"><i class="fa-solid fa-utensils"></i>Proposer un
-                    restaurant</a></li>
-            <li class="list__item"><a class="item__lien" href="#"><i class="fa-regular fa-handshake"></i>Devenir
-                    partenaire</a></li>
-            <li class="list__item"><a class="item__lien" href="#">Mentions légales</a></li>
-            <li class="list__item"><a class="item__lien" href="#">Contact</a></li>
-        </ul>
     </footer>
 </body>
 

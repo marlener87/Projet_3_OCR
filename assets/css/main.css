@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* FICHIER PRINCIPAL */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -312,48 +313,199 @@ template {
 /*html, body {
     background: $color-blue;
 }*/
-.form_conteneur, .recherche {
-  background: #f2f2f2;
-  color: rgb(77, 76, 76);
+.localisation {
+  background: #eaeaea;
+  color: #353535;
+}
+
+.header-container, .section-restos {
+  background-color: #f7f7f7;
+}
+
+.fa-solid {
+  color: #353535;
+}
+
+.card-function {
+  background-color: #f7f7f7;
+}
+.card-function__nb {
+  background-color: #9356DC;
+  color: white;
+}
+
+.footer {
+  background-color: #353535;
+}
+.footer .footer-list__lien {
+  color: white;
+}
+.footer .fa-footer {
+  color: white;
+}
+.footer .fa-handshake {
+  font-size: 11px;
 }
 
 /* Logo */
-.conteneur {
+.navbar {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 5px;
+}
+.navbar__container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 0 15px 0;
+  padding: 20px 0 10px 0;
 }
-
-.logo {
+.navbar__logo {
   height: 35px;
 }
 
-/* Barre de recherche */
-.form_conteneur {
+/* Header */
+.localisation {
   display: flex;
   justify-content: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-
-.recherche {
-  font-size: 19px;
-  font-weight: bold;
-  width: 200px;
-  height: 50px;
-  border: none;
-}
-
-.position {
-  height: 50px;
+.localisation__img {
   padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.fa-location-dot {
+.localisation .fa-location-dot {
   font-size: 19px;
+}
+.localisation__title {
+  font-size: 19px;
+  font-weight: bold;
+  width: 200px;
+  border: none;
+  margin: 15px 0;
+}
+
+.header-container {
+  padding: 30px 10px 60px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header-container__title {
+  color: red;
+  /*display: flex;
+  align-items: center;
+  justify-content: center;*/
+}
+.header-container__text {
+  font-size: 20px;
+  margin-top: 0;
+  color: green;
+}
+.header-container__button {
+  background-color: purple;
+  color: white;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 0 25px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* section fonctionnement */
+.section-functioning {
+  padding: 30px;
+}
+.section-functioning .card-function {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+.section-functioning .card-function__nb {
+  border-radius: 50%;
+  padding: 10px;
+  height: 5px;
+  display: flex;
+  align-items: center;
+}
+.section-functioning .card-function__text {
+  font-weight: 600;
+  padding: 10px;
+}
+.section-functioning .card-function .fa-solid {
+  padding: 20px;
+  font-size: 20px;
+}
+
+.section-restos {
+  padding: 30px;
+}
+.section-restos .resto-card {
+  /*width: 31%;
+  height: 20%;
+  margin-bottom: 100px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-sizing: border-box;*/
+  text-decoration: none;
+  color: black;
+}
+.section-restos .resto-card__img {
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 17px 17px 0 0;
+}
+.section-restos .resto-card__img__resto {
+  width: 100%;
+  /* Méthode de centrage en fonction de la taille de l'image */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section-restos .resto-card__body {
+  padding: 20px;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.section-restos .resto-card .resto {
+  margin: 0 0 5px;
+  font-size: 22px;
+}
+.section-restos .resto-card .resto--strong {
+  font-weight: 800;
+}
+.section-restos .resto-card .fa-heart {
+  font-size: 35px;
+}
+
+/* FOOTER */
+.footer {
+  padding: 30px;
+}
+.footer .footer-container__logo {
+  height: 30px;
+}
+.footer .footer-list {
+  padding: 0;
+}
+.footer .footer-list__item {
+  list-style-type: none;
+  padding: 5px;
+}
+.footer .footer-list__lien {
+  text-decoration: none;
+}
+.footer .footer-list__lien--espace {
+  padding-left: 5px;
 }
 
 .body {
