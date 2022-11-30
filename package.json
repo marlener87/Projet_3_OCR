@@ -1,0 +1,19 @@
+{
+  "name": "projet_3_ocr",
+  "version": "1.0.0",
+  "description": "Dynamiser une page web avec des animations CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlener87/Projet_3_OCR.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marlener87/Projet_3_OCR/issues"
+  },
+  "homepage": "https://github.com/marlener87/Projet_3_OCR#readme"
+}

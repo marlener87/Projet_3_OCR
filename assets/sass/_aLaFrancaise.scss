@@ -1,4 +1,7 @@
-
+.navbar__arrow {
+    position: absolute;
+    top: 25px;
+}
 
 .fa-arrow-left {
     font-size: 20px;
@@ -18,10 +21,24 @@
     font-weight: 300;
 }
 
+.card-menu__header {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0; 
+        width: 50px;
+        height: 4px;
+        background-color: #99e2d0;  
+    }
+}
+
 .description {
     border-radius: 20px;
     padding: 15px;
-    margin: 10px 0;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
     &__title {
         margin: 0;
@@ -41,9 +58,23 @@
         &__price {
             font-weight: 700;
         }
-
     }
 }
+
+.menu-button {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.button__command {
+    padding: 0 50px;
+}
+
+.coeur {
+    padding-right: 30px;
+}
+
 /*
 .card-function {
     display: flex;

@@ -4,6 +4,8 @@
 @import "color.scss";
 @import "accueil.scss";
 @import "aLaFrancaise.scss";
+@import "768.scss";
+@import "992.scss";
 
 
 
@@ -14,3 +16,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.header__title {
+    font-family: 'Shrikhand', cursive;
+    font-size: 30px;
+}
