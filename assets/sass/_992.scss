@@ -1,0 +1,43 @@
+@media screen and (min-width: 992px) {
+.section-functioning {
+    .functioning__cards {
+        display: flex;
+        justify-content: space-between; 
+    }
+
+    .card-function {
+        width: 30%;
+        margin: 20px 5px;
+        &__nb {
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
+        &__text {
+            margin-left: 20px;
+        }
+    } 
+}
+
+
+.restos__title {
+    margin-left: 15px;
+}
+
+.restos__cards {
+display: flex;
+flex-wrap: wrap;
+
+.resto-card {
+    margin: 20px;
+    width: 30%;
+}
+}
+
+
+/* footer */
+.footer-list {
+    display: flex;
+    justify-content: space-around;
+}    
+}

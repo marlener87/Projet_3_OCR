@@ -1,0 +1,42 @@
+@media screen and (min-width: 768px) {
+.section-functioning {
+    .functioning__cards {
+        display: flex;
+        justify-content: space-between; 
+    }
+
+    .card-function {
+        margin: 20px 5px;
+        &__nb {
+            margin-top: 20px;
+        }
+
+        .fa-solid {
+            padding: 10px;
+        }
+
+        &__text {
+            padding: 0;
+            margin-bottom: 10px;
+        }
+    } 
+}
+
+
+
+.restos__cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    .resto-card {
+        margin: 15px;
+        width: 45%;
+    }
+}
+
+
+.footer-list {
+    display: flex;
+    justify-content: space-between;
+}    
+}
