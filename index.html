@@ -25,11 +25,12 @@
     <!-- HEADER -->
     <header class="page-header">
         <div class="localisation">
-            <div class="localisation__img">
-                <i class="fa-sharp fa-solid fa-location-dot"></i>
-            </div>
-            <p class="localisation__title">Paris, Belleville</p>
-            <!--<p class="localisation__title localisation__title--color1">Nîmes</p>-->
+            <div class="localisation-position">
+                <div class="localisation__img">
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                </div>
+                <p class="localisation__title">Paris, Belleville</p>
+            <!--<p class="localisation__title localisation__title--color1">Nîmes</p>--></div>
         </div>
 
         <div class="header-container">
@@ -47,7 +48,7 @@
                 <div class="functioning__cards">
                     <div class="card-function">
                         <div class="card-function__nb">
-                            <p class="nb__ofFunction">1</p>
+                            <span class="nb__ofFunction">1</span>
                         </div>
                         <i class="fa-solid fa-mobile-screen-button"></i>
                         <p class="card-function__text">Choisissez un restaurant</p>
@@ -59,11 +60,11 @@
                         <i class="fa-solid fa-bars"></i>
                         <p class="card-function__text">Composez votre menu</p>
                     </div>
-                    <div class="card-function">
+                    <div class="card-function card-function--color">
                         <div class="card-function__nb">
                             <p class="nb__ofFunction">3</p>
                         </div>
-                        <i class="fa-sharp fa-solid fa-store"></i>
+                        <i class="fa-sharp fa-solid fa-store fa-solid--color"></i>
                         <p class="card-function__text">Dégustez au restaurant</p>
                     </div>
                 </div>
@@ -92,8 +93,23 @@
                                     <p class="resto">Ménilmontant</p>
                                 </div>
                             </div>
+                            <!-- coeur animé -->
                             <div class="resto-card__body__starResto">
-                                <i class="fa-regular fa-heart"></i>
+                               <!-- <svg id='heart' height="0" width="0">
+                                    <defs>
+                                        <clipPath id="svgPath">
+                                            <path d="M20,35.09,4.55,19.64a8.5,8.5,0,0,1-.13-12l.13-.13a8.72,8.72,0,0,1,12.14,0L20,10.79l3.3-3.3a8.09,8.09,0,0,1,5.83-2.58,8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.13,12l-.13.13Z"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                
+                                <div class="heart-container">
+                                   <svg width="40" height="40" viewBox="0 0 40 40" class='heart-stroke'>
+                                      <path d="M20,35.07,4.55,19.62a8.5,8.5,0,0,1-.12-12l.12-.12a8.72,8.72,0,0,1,12.14,0L20,10.77l3.3-3.3A8.09,8.09,0,0,1,29.13,4.9a8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.12,12l-.12.12ZM10.64,7.13A6.44,6.44,0,0,0,6.07,18.19L20,32.06,33.94,18.12A6.44,6.44,0,0,0,34,9l0,0a6.44,6.44,0,0,0-4.77-1.85A6,6,0,0,0,24.83,9L20,13.78,15.21,9A6.44,6.44,0,0,0,10.64,7.13Z"/>
+                                   </svg>
+                                   
+                                   <a href='#' class='heart-clip'></a>
+                                </div>-->
                             </div>
                         </div>
                     </a>

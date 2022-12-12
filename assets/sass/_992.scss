@@ -1,24 +1,18 @@
 @media screen and (min-width: 992px) {
 .section-functioning {
+
     .functioning__cards {
         display: flex;
-        justify-content: space-between; 
-    }
+        flex-direction: row;
 
-    .card-function {
-        width: 30%;
-        margin: 20px 5px;
-        &__nb {
-            margin-top: 20px;
-            margin-right: 20px;
-        }
-
-        &__text {
-            margin-left: 20px;
+        .card-function {
+            
+            &__text {
+                top: 25px;
+            }
         }
     } 
 }
-
 
 .restos__title {
     margin-left: 15px;
@@ -29,15 +23,28 @@ display: flex;
 flex-wrap: wrap;
 
 .resto-card {
-    margin: 20px;
+    margin: 15px;
     width: 30%;
 }
 }
 
-
-/* footer */
-.footer-list {
+.carte {
     display: flex;
-    justify-content: space-around;
-}    
+}
+
+.card-menu {
+    width: 100%;
+    &__description {
+        display: flex;
+        flex-direction: column;
+    }
+    .description {
+        width: 80%;
+    }
+}
+
+.footer-list {
+    padding-right: 100px !important;
+}   
+
 }

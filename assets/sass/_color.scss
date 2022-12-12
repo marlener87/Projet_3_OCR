@@ -1,4 +1,5 @@
 $color-purple: #9356DC;
+$color-parme: #f5edff;
 $color-pink: #ff79da;
 $color-green: #99e2d0;
 $color-grey-light: #eaeaea;
@@ -35,10 +36,22 @@ $color-black: #000;
 
 .fa-solid {
     color: $color-grey;
+
+    &--color {
+        color: $color-purple;
+    }
+}
+
+.fa-check {
+    color: $color-green;
 }
 
 .card-function {
     background-color: $color-grey-very-light;
+
+    &--color {
+        background-color: $color-parme;
+    }
 
     &__nb {
         background-color: $color-purple;

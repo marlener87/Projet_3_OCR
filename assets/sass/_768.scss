@@ -2,27 +2,37 @@
 .section-functioning {
     .functioning__cards {
         display: flex;
-        justify-content: space-between; 
-    }
+        flex-direction: row;
+        justify-content: space-between;
 
-    .card-function {
-        margin: 20px 5px;
-        &__nb {
-            margin-top: 20px;
-        }
+        .card-function {
+            padding: 10px 0;
+            margin-right: 20px;
+            position: relative;
+            width: calc(100% / 3 - 40px);
 
-        .fa-solid {
-            padding: 10px;
-        }
+            .fa-solid {
+                padding: 15px 30px;
+            }
 
-        &__text {
-            padding: 0;
-            margin-bottom: 10px;
+            &__text {
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                left: 70px;
+                top: 15px;
+            }
         }
     } 
 }
 
+.resto-header {
+    height: 500px;
+}
 
+.restos__title {
+    margin: 15px;
+}
 
 .restos__cards {
     display: flex;
@@ -31,6 +41,27 @@
     .resto-card {
         margin: 15px;
         width: 45%;
+    }
+}
+
+
+.card-menu__description {
+    display: flex;
+    justify-content: space-between;
+
+    .description {
+        margin-right: 10px;
+        width: calc(100% / 3 - 5px);
+
+        &__entitled {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-left: 10px;
+            width: calc(100% - 15px);
+           
+        }
     }
 }
 
