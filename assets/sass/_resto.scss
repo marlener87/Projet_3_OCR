@@ -7,17 +7,25 @@
     font-size: 20px;
 }
 
+/* HEADER */
 .resto-container__imgResto {
     width: 100%;
-    }
+}
 
+/* CARD */
 .section-header {
     display: flex;
-    align-items: baseline;
     justify-content: space-between;
 }
 
+.starResto {
+    padding-right: 30px;
+    padding-top: 20px;
+}
 
+.carte {
+    animation: apparition 1s ease-out;
+}
 
 .card-menu__header {
     position: relative;
@@ -43,6 +51,7 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     display: flex;
     justify-content: space-between;
+    width: auto;
 
     .descritpion-menu {
         width: 80%;
@@ -51,6 +60,9 @@
     &__title {
         margin: 15px 0 0 0;
         font-size: 20px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
     &__entitled {
         margin: 0 0 15px 0;
@@ -59,13 +71,22 @@
         align-items: baseline;
         justify-content: space-between;
         border-radius: 20px;
+        
 
-        &__text, &__price {
+        &__text {
             margin: 5px 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
 
         &__price {
             font-weight: 700;
+            margin: 5px 0;
+            /*&:hover {
+                animation: validation 1s;
+            }*/
+            
         }
     }
 
@@ -75,8 +96,14 @@
 
     .check {
         display: none;
+        /*background-color: #99e2d0;
+        height: auto;
+        width: 80px;
+        border-radius: 0 20px 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;*/
     }
-
     &:hover {
         .check {
             display: block;
@@ -87,20 +114,48 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: transform 330ms ease-in;
+            transition: transform 0.5s ease-out;
+            animation: validation 1s;
 
             &__btn {
                 border-radius: 50%;
                 border: none;
                 background-color: white;
-                
-                .fa-check {
-                    font-size: 20px;
-                }
             }
         }
+        .fa-check {
+            font-size: 20px;
+            transform: rotate(360deg);
+            transition: 0.4s ease-in-out;
+        }
     }
+    /*.fa-check {
+        color: #99e2d0;
+        padding: 5px;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+
+    .check__btn {
+        height: 100%;
+        width: 80px;
+        border-radius: 0 20px 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: linear-gradient(to left, #99e2d0 100%, #fff 50%);
+        background-size: 100% 100%;
+        background-position: left;
+        transition: all 0.5s ease-out;
+
+        &:hover {
+            background-position: right;
+            background-size: 100% 100%;
+        }
+    }*/
 }
+
 
 /*.btn {
     &:hover + .box {
@@ -163,7 +218,30 @@
     }
 }*/
 
+/* Partie valiadation verte dans l'intitulé du plat */
+@keyframes validation {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
 
+/* Partie menu */
+@keyframes apparition {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
 
 
 
@@ -189,6 +267,3 @@
     z-index: 900;
     position: relative;
 }
-
-
-

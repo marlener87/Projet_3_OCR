@@ -14,6 +14,16 @@
     } 
 }
 
+.resto-container__imgResto {
+    /* déplacer l'image vers le haut */
+    
+}
+
+
+.main-resto {
+    margin: 0 70px;
+}
+
 .restos__title {
     margin-left: 15px;
 }
@@ -38,8 +48,13 @@ flex-wrap: wrap;
         display: flex;
         flex-direction: column;
     }
+
     .description {
-        width: 80%;
+        width: auto;
+
+        &__entitled {
+            flex-direction: row;
+        }
     }
 }
 

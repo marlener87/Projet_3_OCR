@@ -112,11 +112,40 @@ body {
     }
 }
 
-.loader-bars {
+.loader-bars:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 10px;
     height: 30px;
     background-color: #fff;
-    animation: grow 1s linear infinite;
+    animation: grow 1.5s linear infinite;
+}
+
+.loader-bars:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: 10px;
+    height: 30px;
+    background-color: #fff;
+    animation: grow 1.5s linear -0.5s infinite;
+}
+
+.loader-bars span {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: 0;
+    width: 10px;
+    height: 30px;
+    background-color: #fff;
+    animation: grow 1.5s linear 1s infinite;
 }
 
 
@@ -144,8 +173,76 @@ body {
         transform: scaleY(0);
         opacity: 0;
     }
-    100% {
+    50% {
         transform: scaleY(1);
         opacity: 1;
     }
+    100% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+}
+
+
+/* BUTTON */
+.playground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px;
+    width: 200px;
+    border: 1px solid #DDD;
+    padding: 10px;
+    color: #273c75;
+    transition: all 0.5s ease-out;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.btn1 {
+    background: linear-gradient(to right, #e84118 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: right;
+}
+
+.btn1:hover {
+    background-position: left;
+}
+
+.btn2 {
+    background: linear-gradient(to left, #e84118 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: left;
+}
+
+.btn2:hover {
+    background-position: right;
+}
+
+.btn3 {
+    background: linear-gradient(to top, #e84118 50%, #fff 50%);
+    background-size: 100% 200%;
+    background-position: top;
+}
+
+.btn3:hover {
+    background-position: bottom;
+}
+
+.btn4 {
+    background: linear-gradient(to bottom, #e84118 50%, #fff 50%);
+    background-size: 100% 200%;
+    background-position: bottom;
+}
+
+.btn4:hover {
+    background-position: top;
 }

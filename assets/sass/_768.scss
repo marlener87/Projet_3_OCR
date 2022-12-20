@@ -7,9 +7,13 @@
 
         .card-function {
             padding: 10px 0;
-            margin-right: 20px;
+            /*margin-right: 20px;*/
             position: relative;
-            width: calc(100% / 3 - 40px);
+            width: calc(100% / 3 - 20px);
+
+            &:last-child {
+                margin-right: 0;
+            }
 
             .fa-solid {
                 padding: 15px 30px;
@@ -17,7 +21,7 @@
 
             &__text {
                 margin: 0;
-                padding: 0;
+                padding: 0 20px 0 0;
                 position: absolute;
                 left: 70px;
                 top: 15px;
@@ -50,7 +54,7 @@
     justify-content: space-between;
 
     .description {
-        margin-right: 10px;
+        margin-right: 20px;
         width: calc(100% / 3 - 5px);
 
         &__entitled {
@@ -70,4 +74,11 @@
     display: flex;
     justify-content: space-between;
 }    
+}
+
+
+@media screen and (min-width: 875px) {
+    .card-function__text {
+        top: 26px;
+    }
 }

@@ -1,0 +1,72 @@
+$color-purple: #9356DC;
+$color-parme: #f5edff;
+$color-pink: #ff79da;
+$color-green: #99e2d0;
+$color-grey-light: #eaeaea;
+$color-grey-very-light: #f7f7f7;
+$color-grey: #353535;
+$color-white: #fff;
+$color-black: #000;
+
+
+.localisation {
+    background: $color-grey-light;
+    color: $color-grey;
+}
+
+.header-container, .section-restos {
+    background-color: $color-grey-very-light;
+}
+
+.description {
+    background-color: $color-white;
+}
+
+.header-container__button {
+    color: $color-white;
+}
+  
+.resto-card {
+    color: $color-black;
+}
+
+.fa-solid {
+    color: $color-grey;
+
+    &--color {
+        color: $color-purple;
+    }
+}
+
+.fa-check {
+    color: $color-green;
+}
+
+.card-function {
+    background-color: $color-grey-very-light;
+
+    &--color {
+        background-color: $color-parme;
+    }
+
+    &__nb {
+        background-color: $color-purple;
+        color: $color-white;
+    }
+}
+
+.footer {
+    background-color: $color-grey;
+
+    .footer-list__lien {
+        color: $color-white;
+    }
+
+    .fa-footer {
+        color: $color-white;
+    }
+
+    .fa-handshake {
+        font-size: 11px;
+    }
+}
