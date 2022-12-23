@@ -66,6 +66,12 @@
             width: calc(100% - 15px);
            
         }
+
+        &:hover {
+            .description__entitled__price {
+                transform: translateX(0px);
+            }
+        }
     }
 }
 

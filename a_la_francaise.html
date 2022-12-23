@@ -35,7 +35,7 @@
     </header>
 
     <!-- CARD -->
-    <main class="main-resto">
+    <main class="main-resto site">
         <section class="section-restos section-restos--taille">
             <header class="section-header">
                 <h2 class="header__title">A la française</h2>
@@ -65,7 +65,8 @@
                         <h3 class="card-menu__title">ENTREES</h3>
                     </div>
                     <div class="card-menu__description">
-                        <div class="description">
+                        <input type="checkbox" id="entree" class="input_card">
+                        <label for="entree" class="description">
                             <div class="descritpion-menu">
                                 <h4 class="description__title">Tartare de poulpe acidulé</h4>    
                                 <div class="description__entitled">
@@ -78,42 +79,39 @@
                                     <i class="fa-solid fa-check"></i>
                                 </button>
                             </div>
-                        </div>
-                        <!--<div class="container">
-                            <button class="btn">Transform!</button>
-                            <div class="box">
-                                <span>Boop!</span>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <button class="btn">Transform!</button>
-                            <div class="boxes">
-                                <div class="boxes__base boxes--rotDegrees">rotate(360deg)</div>
-                                <div class="boxes__base boxes--rotTurns">rotate(1turn)</div>
-                            </div>
-                        </div>
+                        </label>
 
-                        <div class="container">
-                            <div class="btn1">Charger !</div>
-                            <div class="progress">
-                                <div class="progress__bar"></div>
+                        <input type="checkbox" id="entree" class="input_card">
+                        <label for="entree" class="description">
+                            <div class="descritpion-menu">
+                                <h4 class="description__title">Velouté de légumes d'antan</h4>    
+                                <div class="description__entitled">
+                                    <p class="description__entitled__text">Carotte, panais, topinambour</p>
+                                    <p class="description__entitled__price">35€</p> 
+                                </div>  
                             </div>
-                        </div>-->
+                            <div class="check">
+                                <button class="check__btn">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+                            </div>
+                        </label>
 
-                        <div class="description">
-                            <h4 class="description__title">Velouté de légumes d'antan</h4>
-                            <div class="description__entitled">
-                                <p class="description__entitled__text">Carotte, panais, topinambour</p>
-                                <p class="description__entitled__price">35€</p>
+                        <input type="checkbox" id="entree" class="input_card">
+                        <label for="entree" class="description">
+                            <div class="descritpion-menu">
+                                <h4 class="description__title">Soupe à l'oignon</h4>    
+                                <div class="description__entitled">
+                                    <p class="description__entitled__text">Revisitée</p>
+                                    <p class="description__entitled__price">20€</p> 
+                                </div>  
                             </div>
-                        </div>
-                        <div class="description">
-                            <h4 class="description__title">Soupe à l'oignon</h4>
-                            <div class="description__entitled">
-                                <p class="description__entitled__text">Revisitée</p>
-                                <p class="description__entitled__price">20€</p>
+                            <div class="check">
+                                <button class="check__btn">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
                             </div>
-                        </div>
+                        </label>
                     </div>
                 </div>
                 <!-- plats -->
@@ -122,27 +120,53 @@
                         <h3 class="card-menu__title">PLATS</h3>
                     </div>
                     <div class="card-menu__description">
-                        <div class="description">
-                            <h4 class="description__title">Coquilles Saint-Jacques</h4> 
-                            <div class="description__entitled">
-                                <p class="description__entitled__text">Accompagnées d'une purée de panais</p>
-                                <p class="description__entitled__price">40€</p>
+                        <input type="checkbox" id="plat" class="input_card">
+                        <label for="plat" class="description">
+                            <div class="descritpion-menu">
+                                <h4 class="description__title">Coquilles Saint-Jacques</h4>    
+                                <div class="description__entitled">
+                                    <p class="description__entitled__text">Accompagnées d'une purée de panais</p>
+                                    <p class="description__entitled__price">40€</p> 
+                                </div>  
                             </div>
-                        </div>
-                        <div class="description">
-                            <h4 class="description__title">Magret de canard</h4>
-                            <div class="description__entitled">
-                                <p class="description__entitled__text">Et parmentier de pommes de terre</p>
-                                <p class="description__entitled__price">35€</p>
+                            <div class="check">
+                                <button class="check__btn">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
                             </div>
-                        </div>
-                        <div class="description">
-                            <h4 class="description__title">Pigeonneau d'Ille-et-Vilaine</h4>
-                            <div class="description__entitled">
-                                <p class="description__entitled__text">Sur son lit de gnocchis aux légumes</p>
-                                <p class="description__entitled__price">44€</p>
+                        </label>
+
+                        <input type="checkbox" id="plat" class="input_card">
+                        <label for="plat" class="description">
+                            <div class="descritpion-menu">
+                                <h4 class="description__title">Magret de canard</h4>    
+                                <div class="description__entitled">
+                                    <p class="description__entitled__text">Et parmentier de pommes de terre</p>
+                                    <p class="description__entitled__price">35€</p> 
+                                </div>  
                             </div>
-                        </div>
+                            <div class="check">
+                                <button class="check__btn">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+                            </div>
+                        </label>
+                        
+                        <input type="checkbox" id="plat" class="input_card">
+                        <label for="plat" class="description">
+                            <div class="descritpion-menu">
+                                <h4 class="description__title">Pigeonneau d'Ille-et-Vilaine</h4>    
+                                <div class="description__entitled">
+                                    <p class="description__entitled__text">Sur son lit de gnocchis aux légumes</p>
+                                    <p class="description__entitled__price">44€</p> 
+                                </div>  
+                            </div>
+                            <div class="check">
+                                <button class="check__btn">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+                            </div>
+                        </label>
                     </div>
                 </div>
                 <!-- desserts -->
@@ -151,27 +175,53 @@
                         <h3 class="card-menu__title">DESSERTS</h3>
                     </div>
                     <div class="card-menu__description">
-                        <div class="description">
-                            <h4 class="description__title">Pétales de violettes glacés</h4>
-                            <div class="description__entitled">
-                                <p class="description__entitled__text">Et purée de noisettes</p>
-                                <p class="description__entitled__price">18€</p>
+                        <input type="checkbox" id="dessert" class="input_card">
+                        <label for="dessert" class="description">
+                            <div class="descritpion-menu">
+                                <h4 class="description__title">Pétales de violettes glacés</h4>    
+                                <div class="description__entitled">
+                                    <p class="description__entitled__text">Et purée de noisettes</p>
+                                    <p class="description__entitled__price">18€</p> 
+                                </div>  
                             </div>
-                        </div>
-                        <div class="description">
-                            <h4 class="description__title">Fondant au chocolat</h4>
-                            <div class="description__entitled">
-                                <p class="description__entitled__text">Revisité</p>
-                                <p class="description__entitled__price">22€</p>
+                            <div class="check">
+                                <button class="check__btn">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
                             </div>
-                        </div>
-                        <div class="description">
-                            <h4 class="description__title">Millefeuille croustillant</h4>
-                            <div class="description__entitled">
-                                <p class="description__entitled__text">Myrtilles et pâte d'amande</p>
-                                <p class="description__entitled__price">23€</p>
+                        </label>
+
+                        <input type="checkbox" id="dessert" class="input_card">
+                        <label for="dessert" class="description">
+                            <div class="descritpion-menu">
+                                <h4 class="description__title">Fondant au chocolat</h4>    
+                                <div class="description__entitled">
+                                    <p class="description__entitled__text">Revisité</p>
+                                    <p class="description__entitled__price">22€</p> 
+                                </div>  
                             </div>
-                        </div>
+                            <div class="check">
+                                <button class="check__btn">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+                            </div>
+                        </label>
+
+                        <input type="checkbox" id="dessert" class="input_card">
+                        <label for="dessert" class="description">
+                            <div class="descritpion-menu">
+                                <h4 class="description__title">Millefeuille croustillant</h4>    
+                                <div class="description__entitled">
+                                    <p class="description__entitled__text">Myrtilles et pâte d'amande</p>
+                                    <p class="description__entitled__price">23€</p> 
+                                </div>  
+                            </div>
+                            <div class="check">
+                                <button class="check__btn">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+                            </div>
+                        </label>
                     </div>
                 </div>
             </div>

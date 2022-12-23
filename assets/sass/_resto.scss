@@ -45,22 +45,27 @@
 }
 
 .description {
+    position: relative;
     border-radius: 20px;
-    padding-left: 15px;
+    padding: 0 15px;
     margin: 20px 0;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     display: flex;
     justify-content: space-between;
     width: auto;
+    overflow: hidden;
+    transition: 1s linear ;
 
     .descritpion-menu {
-        width: 80%;
+        //width: 80%;
+        width: 100%;
+        transition: ease-in-out .5s .5s; 
     }    
 
     &__title {
         margin: 15px 0 0 0;
         font-size: 20px;
-        white-space: nowrap;
+        //white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
     }
@@ -72,10 +77,9 @@
         justify-content: space-between;
         border-radius: 20px;
         
-
         &__text {
             margin: 5px 0;
-            white-space: nowrap;
+            //white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
         }
@@ -83,142 +87,77 @@
         &__price {
             font-weight: 700;
             margin: 5px 0;
-            /*&:hover {
-                animation: validation 1s;
-            }*/
-            
+            transform: translateX(0px);
+            transition: 1s linear;
         }
     }
-
-    /*&:hover + .check {
-        transform: translate(100%, 0);
-    }*/
 
     .check {
-        display: none;
-        /*background-color: #99e2d0;
-        height: auto;
-        width: 80px;
-        border-radius: 0 20px 20px 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;*/
-    }
-    &:hover {
-        .check {
-            display: block;
-            background-color: #99e2d0;
-            height: auto;
-            width: 80px;
-            border-radius: 0 20px 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.5s ease-out;
-            animation: validation 1s;
-
-            &__btn {
-                border-radius: 50%;
-                border: none;
-                background-color: white;
-            }
-        }
-        .fa-check {
-            font-size: 20px;
-            transform: rotate(360deg);
-            transition: 0.4s ease-in-out;
-        }
-    }
-    /*.fa-check {
-        color: #99e2d0;
-        padding: 5px;
-        background-color: #fff;
-        border-radius: 50%;
-    }
-
-    .check__btn {
+        /*display: none;*/
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(80px);
+        background-color: #99e2d0;
         height: 100%;
         width: 80px;
         border-radius: 0 20px 20px 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        border: none;
-        background: linear-gradient(to left, #99e2d0 100%, #fff 50%);
-        background-size: 100% 100%;
-        background-position: left;
-        transition: all 0.5s ease-out;
+        transition: 1s linear;
 
-        &:hover {
-            background-position: right;
-            background-size: 100% 100%;
-        }
-    }*/
-}
-
-
-/*.btn {
-    &:hover + .box {
-        transform: scale(1);
-        span {
-            transform: translateY(0);
+        &__btn {
+            border-radius: 50%;
+            border: none;
+            background-color: white;
         }
     }
-}
-.box {
-    width: 100px;
-    height: 100px;
-    transform: scale(0.1);
-    transition: transform 330ms ease-in-out;
-    overflow: hidden;
-    span {
-        display: inline-block;
-        transform: translateY(250%);
-        transition: transform 280ms ease-out 50ms;
+
+    .fa-check {
+        font-size: 20px;
+        transition: ease-in-out .5s;
     }
-}
-.btn {
-    &:hover + .boxes {
-        & > .boxes--rotDegrees {
-            transform: rotate(0deg);
+    &:hover {
+        .description-menu {
+            font-size: 20px;
+            transition: ease-in-out .5s;
         }
-        & > .boxes--rotTurns {
-             transform: rotate(0turn);
+
+        .description__entitled__price {
+            transform: translateX(-80px);
+        }
+
+        .check {
+            /*display: block;
+            transition: transform 0.5s ease-out;
+            animation: validation 1s forwards;*/
+            transform: translateX(0px);
+        }
+
+        .fa-check {
+            transform: rotate(360deg);
+            transition: ease-in-out .5s .3s;
         }
     }
 }
-.boxes {
-    &--rotDegrees {
-        background: green;
-         transform: rotate(-360deg);
-         transition: transform 500ms ease-out;
-     }
- 
-     &--rotTurns {
-         background: pink;
-         transform: rotate(-1turn);
-         transition: transform 500ms ease-in;
-     }
- }
 
- .btn1 {
-    &:active {
-        & + .progress {
-            & > .progress__bar {
-                transform: scaleX(1);
-            }
-        }
-    }
- }
-.progress {
-    &__bar {
-        transform-origin: 0% 50%;
-        transform: scaleX(0);
-        transition: transform 1000ms;
-    }
-}*/
+.input_card {
+    display: none;
+}
 
-/* Partie valiadation verte dans l'intitulé du plat */
+.input_card:checked + .descritption {
+    .check {
+        transform: translateX(0px); 
+    }
+    .fa-check { 
+        transform: rotate(360deg); 
+        transition: ease-in-out .5s .5s ; 
+    } 
+}
+    
+
+/* Partie valiadation verte dans l'intitulé du plat 
 @keyframes validation {
     0% {
         transform: translateX(100px);
@@ -229,7 +168,7 @@
         transform: translateX(0px);
         opacity: 1;
     }
-}
+}*/
 
 /* Partie menu */
 @keyframes apparition {

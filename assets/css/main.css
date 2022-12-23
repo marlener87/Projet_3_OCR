@@ -366,6 +366,66 @@ template {
   font-size: 11px;
 }
 
+.body {
+  font-family: "Roboto", sans-serif;
+}
+
+.header__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+}
+
+.site {
+  margin: auto;
+  max-width: 1400px;
+  width: calc(100% - 30px);
+}
+
+/* LOADER */
+.section-loader {
+  background-color: teal;
+  height: 200px;
+  line-height: 200px;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.loader-quart {
+  border-radius: 50px;
+  border: 6px solid rgba(255, 255, 255, 0.4);
+}
+.loader-quart:after {
+  position: absolute;
+  content: "";
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border: 6px solid transparent;
+  border-top-color: white;
+  border-radius: 50px;
+  animation: spin 5s linear infinite;
+}
+
+.loader-quart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Logo */
 .navbar {
   -webkit-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.4);
@@ -445,6 +505,7 @@ template {
   color: white;
   font-weight: 500;
   height: 50px;
+  cursor: pointer;
 }
 .button:hover {
   background: rgb(255, 121, 218);
@@ -454,7 +515,7 @@ template {
 
 /* section fonctionnement */
 .section-functioning {
-  padding: 30px;
+  padding: 20px;
 }
 .section-functioning .card-function {
   display: flex;
@@ -533,6 +594,10 @@ template {
   display: flex;
   justify-content: space-between;
 }
+.section-restos .resto-card__body__lieu {
+  text-decoration: none;
+  color: black;
+}
 .section-restos .resto-card__body__starResto {
   display: flex;
 }
@@ -568,6 +633,14 @@ template {
   padding-left: 5px;
 }
 
+.coeur {
+  display: none;
+}
+
+.coeur:checked ~ .coeur1 svg * {
+  fill: rgb(255, 121, 218);
+}
+
 .heart-container {
   position: relative;
   width: 40px;
@@ -586,7 +659,7 @@ template {
   }*/
 }
 .heart-clip:hover {
-  animation: pulse 0.6s 0.3s infinite;
+  /*animation: pulse 0.6s 0.3s infinite;*/
 }
 .heart-clip:hover::before {
   transform: scale(1);
@@ -677,49 +750,24 @@ template {
 }
 
 .description {
+  position: relative;
   border-radius: 20px;
-  padding-left: 15px;
+  padding: 0 15px;
   margin: 20px 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   width: auto;
-  /*&:hover + .check {
-      transform: translate(100%, 0);
-  }*/
-  /*.fa-check {
-      color: #99e2d0;
-      padding: 5px;
-      background-color: #fff;
-      border-radius: 50%;
-  }
-
-  .check__btn {
-      height: 100%;
-      width: 80px;
-      border-radius: 0 20px 20px 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: none;
-      background: linear-gradient(to left, #99e2d0 100%, #fff 50%);
-      background-size: 100% 100%;
-      background-position: left;
-      transition: all 0.5s ease-out;
-
-      &:hover {
-          background-position: right;
-          background-size: 100% 100%;
-      }
-  }*/
+  overflow: hidden;
+  transition: 1s linear;
 }
 .description .descritpion-menu {
-  width: 80%;
+  width: 100%;
+  transition: ease-in-out 0.5s 0.5s;
 }
 .description__title {
   margin: 15px 0 0 0;
   font-size: 20px;
-  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -733,121 +781,81 @@ template {
 }
 .description__entitled__text {
   margin: 5px 0;
-  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 .description__entitled__price {
   font-weight: 700;
   margin: 5px 0;
-  /*&:hover {
-      animation: validation 1s;
-  }*/
+  transform: translateX(0px);
+  transition: 1s linear;
 }
 .description .check {
-  display: none;
-  /*background-color: #99e2d0;
-  height: auto;
-  width: 80px;
-  border-radius: 0 20px 20px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;*/
-}
-.description:hover .check {
-  display: block;
+  /*display: none;*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(80px);
   background-color: #99e2d0;
-  height: auto;
+  height: 100%;
   width: 80px;
   border-radius: 0 20px 20px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.5s ease-out;
-  animation: validation 1s;
+  transition: 1s linear;
 }
-.description:hover .check__btn {
+.description .check__btn {
   border-radius: 50%;
   border: none;
   background-color: white;
 }
-.description:hover .fa-check {
+.description .fa-check {
   font-size: 20px;
+  transition: ease-in-out 0.5s;
+}
+.description:hover .description-menu {
+  font-size: 20px;
+  transition: ease-in-out 0.5s;
+}
+.description:hover .description__entitled__price {
+  transform: translateX(-80px);
+}
+.description:hover .check {
+  /*display: block;
+  transition: transform 0.5s ease-out;
+  animation: validation 1s forwards;*/
+  transform: translateX(0px);
+}
+.description:hover .fa-check {
   transform: rotate(360deg);
-  transition: 0.4s ease-in-out;
+  transition: ease-in-out 0.5s 0.3s;
 }
 
-/*.btn {
-    &:hover + .box {
-        transform: scale(1);
-        span {
-            transform: translateY(0);
-        }
-    }
+.input_card {
+  display: none;
 }
-.box {
-    width: 100px;
-    height: 100px;
-    transform: scale(0.1);
-    transition: transform 330ms ease-in-out;
-    overflow: hidden;
-    span {
-        display: inline-block;
-        transform: translateY(250%);
-        transition: transform 280ms ease-out 50ms;
-    }
-}
-.btn {
-    &:hover + .boxes {
-        & > .boxes--rotDegrees {
-            transform: rotate(0deg);
-        }
-        & > .boxes--rotTurns {
-             transform: rotate(0turn);
-        }
-    }
-}
-.boxes {
-    &--rotDegrees {
-        background: green;
-         transform: rotate(-360deg);
-         transition: transform 500ms ease-out;
-     }
 
-     &--rotTurns {
-         background: pink;
-         transform: rotate(-1turn);
-         transition: transform 500ms ease-in;
-     }
- }
+.input_card:checked + .descritption .check {
+  transform: translateX(0px);
+}
+.input_card:checked + .descritption .fa-check {
+  transform: rotate(360deg);
+  transition: ease-in-out 0.5s 0.5s;
+}
 
- .btn1 {
-    &:active {
-        & + .progress {
-            & > .progress__bar {
-                transform: scaleX(1);
-            }
-        }
+/* Partie valiadation verte dans l'intitulé du plat 
+@keyframes validation {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
     }
- }
-.progress {
-    &__bar {
-        transform-origin: 0% 50%;
-        transform: scaleX(0);
-        transition: transform 1000ms;
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
     }
 }*/
-/* Partie valiadation verte dans l'intitulé du plat */
-@keyframes validation {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
 /* Partie menu */
 @keyframes apparition {
   0% {
@@ -934,6 +942,9 @@ template {
     margin-left: 10px;
     width: calc(100% - 15px);
   }
+  .card-menu__description .description:hover .description__entitled__price {
+    transform: translateX(0px);
+  }
   .footer-list {
     display: flex;
     justify-content: space-between;
@@ -952,21 +963,27 @@ template {
   .section-functioning .functioning__cards .card-function__text {
     top: 25px;
   }
-  .resto-container__imgResto {
-    /* déplacer l'image vers le haut */
+  /*.main-resto {
+      margin: 0 70px;
+  }*/
+  .resto-header {
+    overflow: hidden;
+    position: relative;
   }
-  .main-resto {
-    margin: 0 70px;
+  .resto-header .resto-container__imgResto {
+    position: absolute;
+    top: -150px;
   }
   .restos__title {
-    margin-left: 15px;
+    margin: 20px 0;
   }
   .restos__cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
   .restos__cards .resto-card {
-    margin: 15px;
+    margin: 20px 0;
     width: 30%;
   }
   .carte {
@@ -985,18 +1002,13 @@ template {
   .card-menu .description__entitled {
     flex-direction: row;
   }
+  .card-menu .description:hover .description__entitled__price {
+    transform: translateX(-80px);
+  }
   .footer-list {
     padding-right: 100px !important;
   }
 }
 /*@import "loader.scss";*/
-.body {
-  font-family: "Roboto", sans-serif;
-}
-
-.header__title {
-  font-family: "Shrikhand", cursive;
-  font-size: 30px;
-}
 
 /*# sourceMappingURL=main.css.map */

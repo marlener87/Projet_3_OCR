@@ -1,12 +1,10 @@
 @media screen and (min-width: 992px) {
 .section-functioning {
-
     .functioning__cards {
         display: flex;
         flex-direction: row;
 
-        .card-function {
-            
+        .card-function {  
             &__text {
                 top: 25px;
             }
@@ -14,28 +12,34 @@
     } 
 }
 
-.resto-container__imgResto {
-    /* déplacer l'image vers le haut */
-    
-}
-
-
-.main-resto {
+/*.main-resto {
     margin: 0 70px;
+}*/
+.resto-header {
+    overflow: hidden;
+    position: relative;
+
+    .resto-container__imgResto {
+        position: absolute;
+        top: -150px;
+     }
 }
+
+
 
 .restos__title {
-    margin-left: 15px;
+    margin: 20px 0;
 }
 
 .restos__cards {
-display: flex;
-flex-wrap: wrap;
-
-.resto-card {
-    margin: 15px;
-    width: 30%;
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    .resto-card {
+        margin: 20px 0;
+        width: 30%;
+    }
 }
 
 .carte {
@@ -54,6 +58,12 @@ flex-wrap: wrap;
 
         &__entitled {
             flex-direction: row;
+        }
+
+        &:hover {
+            .description__entitled__price {
+                transform: translateX(-80px);
+            }
         }
     }
 }
