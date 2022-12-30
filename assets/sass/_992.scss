@@ -1,4 +1,11 @@
 @media screen and (min-width: 992px) {
+    .site {
+        margin: auto;
+        max-width: 1400px;
+        width: calc(100% - 30px);
+        //width: 100%;
+    }
+
 .section-functioning {
     .functioning__cards {
         display: flex;
@@ -13,7 +20,10 @@
 }
 
 /*.main-resto {
-    margin: 0 70px;
+    border-radius: 50px 50px 0 0;
+    position: relative;
+    top: -50px;
+    height: 100%;
 }*/
 .resto-header {
     overflow: hidden;
@@ -22,7 +32,8 @@
     .resto-container__imgResto {
         position: absolute;
         top: -150px;
-     }
+        //height: 150%;
+    }
 }
 
 

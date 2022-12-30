@@ -29,34 +29,35 @@
     <!-- HEADER -->
     <header class="resto-header">
         <div class="resto-header__container">
-            <img class="resto-container__imgResto" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                alt="Cité Rouge" />
+            <img class="resto-container__imgResto" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française" />
         </div>
     </header>
 
     <!-- CARD -->
-    <main class="main-resto site">
-        <section class="section-restos section-restos--taille">
+    <main class="main-resto ">
+        <section class="section-restos section-restos--taille site">
             <header class="section-header">
                 <h2 class="header__title">A la française</h2>
-                <!-- coeur animé -->
-                <div class="resto-card__body__starResto starResto">
-                    <svg id='heart' height="0" width="0">
-                         <defs>
-                             <clipPath id="svgPath">
-                                 <path d="M20,35.09,4.55,19.64a8.5,8.5,0,0,1-.13-12l.13-.13a8.72,8.72,0,0,1,12.14,0L20,10.79l3.3-3.3a8.09,8.09,0,0,1,5.83-2.58,8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.13,12l-.13.13Z"/>
-                             </clipPath>
-                         </defs>
-                     </svg>
-                     
-                     <div class="heart-container">
-                        <svg width="40" height="40" viewBox="0 0 40 40" class='heart-stroke'>
-                           <path d="M20,35.07,4.55,19.62a8.5,8.5,0,0,1-.12-12l.12-.12a8.72,8.72,0,0,1,12.14,0L20,10.77l3.3-3.3A8.09,8.09,0,0,1,29.13,4.9a8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.12,12l-.12.12ZM10.64,7.13A6.44,6.44,0,0,0,6.07,18.19L20,32.06,33.94,18.12A6.44,6.44,0,0,0,34,9l0,0a6.44,6.44,0,0,0-4.77-1.85A6,6,0,0,0,24.83,9L20,13.78,15.21,9A6.44,6.44,0,0,0,10.64,7.13Z"/>
-                        </svg>
-                        
-                        <span class='heart-clip'></span>
-                     </div>
-                 </div>
+
+                 <!-- coeur animé -->
+                 <div class="resto-card__body__starResto starResto">
+                    <input type="checkbox" id="coeurA" class="coeur">
+                    <svg id='heart' height="0" width="0" >
+                        <defs>
+                            <clipPath id="svgPath">
+                                <path d="M20,35.09,4.55,19.64a8.5,8.5,0,0,1-.13-12l.13-.13a8.72,8.72,0,0,1,12.14,0L20,10.79l3.3-3.3a8.09,8.09,0,0,1,5.83-2.58,8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.13,12l-.13.13Z"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <label for="coeurA" class="coeur1">
+                        <div class="heart-container">
+                            <svg width="40" height="40" viewBox="0 0 40 40" class='heart-stroke' >
+                                <path d="M20,35.07,4.55,19.62a8.5,8.5,0,0,1-.12-12l.12-.12a8.72,8.72,0,0,1,12.14,0L20,10.77l3.3-3.3A8.09,8.09,0,0,1,29.13,4.9a8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.12,12l-.12.12ZM10.64,7.13A6.44,6.44,0,0,0,6.07,18.19L20,32.06,33.94,18.12A6.44,6.44,0,0,0,34,9l0,0a6.44,6.44,0,0,0-4.77-1.85A6,6,0,0,0,24.83,9L20,13.78,15.21,9A6.44,6.44,0,0,0,10.64,7.13Z"/>
+                            </svg>
+                            <span class='heart-clip'></span>
+                        </div>
+                    </label>
+                </div>
             </header>
             <div class="carte">
                 <!-- entrées -->
@@ -65,51 +66,66 @@
                         <h3 class="card-menu__title">ENTREES</h3>
                     </div>
                     <div class="card-menu__description">
-                        <input type="checkbox" id="entree" class="input_card">
-                        <label for="entree" class="description">
+                        <!-- 1 -->
+                        <input type="radio" name="entree" id="entree1" class="input_card">
+                        <label for="entree1" class="description">
                             <div class="descritpion-menu">
-                                <h4 class="description__title">Tartare de poulpe acidulé</h4>    
-                                <div class="description__entitled">
+                                <h4 class="description__title">Tartare de poulpe acidulé</h4>  
+                                <p class="description__text">Aux zestes d'orange</p>  
+                                <!--<div class="description__entitled">
                                     <p class="description__entitled__text">Aux zestes d'orange</p>
-                                    <p class="description__entitled__price">25€</p> 
-                                </div>  
+                                    <p class="description__entitled__price">25€</p>
+                                </div>  --> 
                             </div>
-                            <div class="check">
-                                <button class="check__btn">
-                                    <i class="fa-solid fa-check"></i>
-                                </button>
+                            <div class="validation">
+                                <p class="check__price">25€</p>
+                                <div class="check"> 
+                                    <button class="check__btn">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+                                </div>
                             </div>
+                            
                         </label>
 
-                        <input type="checkbox" id="entree" class="input_card">
-                        <label for="entree" class="description">
+                        <!-- 2 -->
+                        <input type="radio" name="entree" id="entree2" class="input_card">
+                        <label for="entree2" class="description">
                             <div class="descritpion-menu">
                                 <h4 class="description__title">Velouté de légumes d'antan</h4>    
                                 <div class="description__entitled">
                                     <p class="description__entitled__text">Carotte, panais, topinambour</p>
-                                    <p class="description__entitled__price">35€</p> 
+                                    <!--<p class="description__entitled__price">35€</p> -->
                                 </div>  
                             </div>
-                            <div class="check">
-                                <button class="check__btn">
-                                    <i class="fa-solid fa-check"></i>
-                                </button>
+                            <div class="validation">
+                                <p class="check__price">35€</p>
+                                <div class="check">
+                                    <button class="check__btn">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+                                </div>
                             </div>
+                            
                         </label>
 
-                        <input type="checkbox" id="entree" class="input_card">
-                        <label for="entree" class="description">
+                        <!-- 3 -->
+                        <input type="radio" name="entree" id="entree3" class="input_card">
+                        <label for="entree3" class="description">
                             <div class="descritpion-menu">
                                 <h4 class="description__title">Soupe à l'oignon</h4>    
                                 <div class="description__entitled">
                                     <p class="description__entitled__text">Revisitée</p>
-                                    <p class="description__entitled__price">20€</p> 
+                                    <!--<p class="description__entitled__price">20€</p> -->
                                 </div>  
                             </div>
-                            <div class="check">
-                                <button class="check__btn">
-                                    <i class="fa-solid fa-check"></i>
-                                </button>
+                            <div class="validation">
+                                <p class="check__price">20€</p>
+                                <div class="check">
+                                    <button class="check__btn">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+                                </div>
                             </div>
                         </label>
                     </div>
@@ -120,51 +136,60 @@
                         <h3 class="card-menu__title">PLATS</h3>
                     </div>
                     <div class="card-menu__description">
-                        <input type="checkbox" id="plat" class="input_card">
-                        <label for="plat" class="description">
+                        <input type="radio" name="plat" id="plat1" class="input_card">
+                        <label for="plat1" class="description">
                             <div class="descritpion-menu">
                                 <h4 class="description__title">Coquilles Saint-Jacques</h4>    
                                 <div class="description__entitled">
                                     <p class="description__entitled__text">Accompagnées d'une purée de panais</p>
-                                    <p class="description__entitled__price">40€</p> 
+                                    <!--<p class="description__entitled__price">40€</p> -->
                                 </div>  
                             </div>
-                            <div class="check">
-                                <button class="check__btn">
-                                    <i class="fa-solid fa-check"></i>
-                                </button>
+                            <div class="validation">
+                                <p class="check__price">40€</p>
+                                <div class="check">
+                                    <button class="check__btn">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+                                </div>
                             </div>
                         </label>
 
-                        <input type="checkbox" id="plat" class="input_card">
-                        <label for="plat" class="description">
+                        <input type="radio" name="plat" id="plat2" class="input_card">
+                        <label for="plat2" class="description">
                             <div class="descritpion-menu">
                                 <h4 class="description__title">Magret de canard</h4>    
                                 <div class="description__entitled">
                                     <p class="description__entitled__text">Et parmentier de pommes de terre</p>
-                                    <p class="description__entitled__price">35€</p> 
+                                    <!--<p class="description__entitled__price">35€</p> -->
                                 </div>  
                             </div>
-                            <div class="check">
-                                <button class="check__btn">
-                                    <i class="fa-solid fa-check"></i>
-                                </button>
+                            <div class="validation">
+                                <p class="check__price">35€</p>
+                                <div class="check">
+                                    <button class="check__btn">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+                                </div>
                             </div>
                         </label>
                         
-                        <input type="checkbox" id="plat" class="input_card">
-                        <label for="plat" class="description">
+                        <input type="radio" name="plat" id="plat3" class="input_card">
+                        <label for="plat3" class="description">
                             <div class="descritpion-menu">
                                 <h4 class="description__title">Pigeonneau d'Ille-et-Vilaine</h4>    
                                 <div class="description__entitled">
                                     <p class="description__entitled__text">Sur son lit de gnocchis aux légumes</p>
-                                    <p class="description__entitled__price">44€</p> 
+                                    <!--<p class="description__entitled__price">44€</p> -->
                                 </div>  
                             </div>
-                            <div class="check">
-                                <button class="check__btn">
-                                    <i class="fa-solid fa-check"></i>
-                                </button>
+                            <div class="validation">
+                                <p class="check__price">44€</p>
+                                <div class="check">
+                                    <button class="check__btn">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+                                </div>
                             </div>
                         </label>
                     </div>
@@ -175,51 +200,60 @@
                         <h3 class="card-menu__title">DESSERTS</h3>
                     </div>
                     <div class="card-menu__description">
-                        <input type="checkbox" id="dessert" class="input_card">
-                        <label for="dessert" class="description">
+                        <input type="radio" name="dessert" id="dessert1" class="input_card">
+                        <label for="dessert1" class="description">
                             <div class="descritpion-menu">
                                 <h4 class="description__title">Pétales de violettes glacés</h4>    
                                 <div class="description__entitled">
                                     <p class="description__entitled__text">Et purée de noisettes</p>
-                                    <p class="description__entitled__price">18€</p> 
+                                    <!--<p class="description__entitled__price">18€</p>--> 
                                 </div>  
                             </div>
-                            <div class="check">
-                                <button class="check__btn">
-                                    <i class="fa-solid fa-check"></i>
-                                </button>
+                            <div class="validation">
+                                <p class="check__price">18€</p>
+                                <div class="check">
+                                    <button class="check__btn">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+                                </div>
                             </div>
                         </label>
 
-                        <input type="checkbox" id="dessert" class="input_card">
-                        <label for="dessert" class="description">
+                        <input type="radio" name="dessert" id="dessert2" class="input_card">
+                        <label for="dessert2" class="description">
                             <div class="descritpion-menu">
                                 <h4 class="description__title">Fondant au chocolat</h4>    
                                 <div class="description__entitled">
                                     <p class="description__entitled__text">Revisité</p>
-                                    <p class="description__entitled__price">22€</p> 
+                                    <!--<p class="description__entitled__price">22€</p> -->
                                 </div>  
                             </div>
-                            <div class="check">
-                                <button class="check__btn">
-                                    <i class="fa-solid fa-check"></i>
-                                </button>
+                            <div class="validation">
+                                <p class="check__price">22€</p>
+                                <div class="check">
+                                    <button class="check__btn">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+                                </div>
                             </div>
                         </label>
 
-                        <input type="checkbox" id="dessert" class="input_card">
-                        <label for="dessert" class="description">
+                        <input type="radio" name="dessert" id="dessert3" class="input_card">
+                        <label for="dessert3" class="description">
                             <div class="descritpion-menu">
                                 <h4 class="description__title">Millefeuille croustillant</h4>    
                                 <div class="description__entitled">
                                     <p class="description__entitled__text">Myrtilles et pâte d'amande</p>
-                                    <p class="description__entitled__price">23€</p> 
+                                    <!--<p class="description__entitled__price">23€</p> -->
                                 </div>  
                             </div>
-                            <div class="check">
-                                <button class="check__btn">
-                                    <i class="fa-solid fa-check"></i>
-                                </button>
+                            <div class="validation">
+                                <p class="check__price">23€</p>
+                                <div class="check">
+                                    <button class="check__btn">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+                                </div>
                             </div>
                         </label>
                     </div>
@@ -232,7 +266,6 @@
     </main>
 
     <!-- FOOTER -->
-     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-container">
             <svg width="196" height="34" viewBox="0 0 196 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-container__logo">

@@ -23,6 +23,7 @@
     padding-top: 20px;
 }
 
+/* Menu de la carte */ 
 .carte {
     animation: apparition 1s ease-out;
 }
@@ -44,6 +45,7 @@
     font-weight: 300;
 }
 
+/* Entrée, plat, dessert */
 .description {
     position: relative;
     border-radius: 20px;
@@ -65,11 +67,18 @@
     &__title {
         margin: 15px 0 0 0;
         font-size: 20px;
-        //white-space: nowrap;
+        white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
     }
-    &__entitled {
+
+    &__text {
+        padding-left: 15px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    /*&__entitled {
         margin: 0 0 15px 0;
         display: flex;
         flex-direction: row;
@@ -79,21 +88,60 @@
         
         &__text {
             margin: 5px 0;
-            //white-space: nowrap;
+            white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
         }
 
-        &__price {
+        /*&__price {
             font-weight: 700;
             margin: 5px 0;
             transform: translateX(0px);
             transition: 1s linear;
         }
+    }*/
+
+    .validation {
+        position: absolute;
+        height: 100%;
+        left: calc(100% - 125px);
+        transform: translateX(70px);
+        transition: 1s linear;
+
+        .check__price {
+            font-weight: 700;
+            padding-right: 30px;
+            transform: translateX(0px);
+            transition: 1s linear;
+        }
+        .check {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translateX(80px);
+            background-color: #99e2d0;
+            height: 100%;
+            width: 80px;
+            border-radius: 0 20px 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 1s linear;
+
+            &__btn {
+                border-radius: 50%;
+                border: none;
+                background-color: white;
+
+                .fa-check {
+                    font-size: 20px;
+                    transition: ease-in-out .9s;
+                }
+            }
+        }
     }
 
-    .check {
-        /*display: none;*/
+    /*.check {
         position: absolute;
         top: 0;
         right: 0;
@@ -112,19 +160,19 @@
             border: none;
             background-color: white;
         }
-    }
+    }*/
 
-    .fa-check {
-        font-size: 20px;
-        transition: ease-in-out .5s;
-    }
+    
     &:hover {
         .description-menu {
             font-size: 20px;
             transition: ease-in-out .5s;
         }
 
-        .description__entitled__price {
+        /*.description__entitled__price {
+            transform: translateX(-80px);
+        }*/
+        .check__price {
             transform: translateX(-80px);
         }
 
@@ -137,7 +185,7 @@
 
         .fa-check {
             transform: rotate(360deg);
-            transition: ease-in-out .5s .3s;
+            transition: ease-in-out .8s .3s;
         }
     }
 }
@@ -146,9 +194,12 @@
     display: none;
 }
 
-.input_card:checked + .descritption {
-    .check {
+.input_card:checked + .description {
+    /*.check {
         transform: translateX(0px); 
+    }*/
+    .validation {
+        transform: translateX(-10px);
     }
     .fa-check { 
         transform: rotate(360deg); 

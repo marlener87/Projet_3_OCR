@@ -244,9 +244,14 @@
     display: none;
 }
 
-.coeur:checked ~ .coeur1 svg * {
-    
-    fill: rgb(255,121,218);
+.coeur:checked ~ .coeur1 {
+    svg * {
+        fill: rgb(255,121,218);
+    }
+    .heart-clip::before {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 $black: black;
@@ -266,8 +271,6 @@ $black: black;
    clip-path: url(#svgPath);
 
    &:hover {
-      /*animation: pulse 0.6s 0.3s infinite;*/
-
       &::before {
          transform: scale(1);
          opacity: 1;
@@ -279,7 +282,6 @@ $black: black;
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        /*background-color: $red;*/
         background: rgb(255,121,218);
         background: linear-gradient(175deg, rgba(255,121,218,1) 0%, rgba(178,122,227,1) 100%);
         opacity: 0;
@@ -287,9 +289,6 @@ $black: black;
         transition: transform 0.2s linear, opacity 0.2s linear;
         transform-origin: center 60%;
    }
-   /*&.active {
-      animation: pulse 0.6s 0.3s forwards;
-   }*/
 }
 
 .heart-stroke {
@@ -300,17 +299,3 @@ $black: black;
    left: 0;
    fill: $black;
 }
-/*
-@keyframes pulse {
-   0% {
-      transform: scale(1);
-   }
-
-   30% {
-      transform: scale(1.2);
-   }
-
-   60% {
-      transform: scale(1);
-   }
-}*/

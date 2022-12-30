@@ -1,0 +1,203 @@
+.navbar__arrow {
+    position: absolute;
+    top: 25px;
+}
+
+.fa-arrow-left {
+    font-size: 20px;
+}
+
+/* HEADER */
+.resto-container__imgResto {
+    width: 100%;
+}
+
+/* CARD */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.starResto {
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+.carte {
+    animation: apparition 1s ease-out;
+}
+
+.card-menu__header {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0; 
+        width: 50px;
+        height: 4px;
+        background-color: #99e2d0;  
+    }
+}
+
+.card-menu__title {
+    font-weight: 300;
+}
+
+
+    
+
+/* Partie valiadation verte dans l'intitulé du plat 
+@keyframes validation {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}*/
+
+/* Partie menu */
+@keyframes apparition {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+.menu-button {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.button__command {
+    padding: 0 50px;
+}
+
+.coeur {
+    padding-right: 30px;
+}
+
+.section-restos {
+    padding: 10px 20px;
+    z-index: 900;
+    position: relative;
+}
+
+/* test menu resto */
+.menu1 {
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    .input_card {
+        display: none;
+    }
+    
+    .input_card:checked + .description {
+        .check {
+            transform: translateX(0px); 
+        }
+        .fa-check { 
+            transform: rotate(360deg); 
+            transition: ease-in-out .5s .5s ; 
+        } 
+    }
+
+    .description {
+        //position: relative;
+        border-radius: 20px;
+        padding: 0 15px;
+        margin: 20px 0;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        display: flex;
+        justify-content: space-between;
+        width: 100% ;
+        overflow: hidden;
+        transition: 1s linear;
+
+        .menu2 {
+            width: calc(100% - 20px);
+            
+            &:hover {
+                width: calc(100% - 20px - 80px);
+            }
+
+            
+
+            .description__text {
+                padding-left: 15px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }    
+    
+    
+    .menu3 {
+        position: absolute;
+        left: calc(100% - 60px);
+        display: flex;
+        top: 70px;
+        
+        
+    
+        &:hover {
+            transform: translateX(-80px);
+            transition: 1s linear;
+        }
+        &:hover:left {
+            left: calc(100% - 20px - 80px);
+        }
+    
+        .description__price {
+            font-weight: 700;
+            margin: 5px 15px;
+            /*transform: translateX(80px);
+            transition: 1s linear;*/
+        }
+    
+        .check {
+            /*display: none;*/
+            //transform: translateX(80px);
+            background-color: #99e2d0;
+            height: 100%;
+            width: 80px;
+            border-radius: 0 20px 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            //transition: 1s linear;
+    
+            &__btn {
+                border-radius: 50%;
+                border: none;
+                background-color: white;
+            }
+        }
+    
+        .fa-check {
+            font-size: 20px;
+            transition: ease-in-out .5s;
+        }
+    }
+}
+}
+
+
+
+
+

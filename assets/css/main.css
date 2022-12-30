@@ -315,7 +315,10 @@ template {
   color: #353535;
 }
 
-.header-container, .section-restos {
+/*.header-container, .section-restos {
+    background-color: $color-grey-very-light;
+}*/
+.header-container, .section-restos, .main-resto {
   background-color: #f7f7f7;
 }
 
@@ -373,12 +376,6 @@ template {
 .header__title {
   font-family: "Shrikhand", cursive;
   font-size: 30px;
-}
-
-.site {
-  margin: auto;
-  max-width: 1400px;
-  width: calc(100% - 30px);
 }
 
 /* LOADER */
@@ -640,6 +637,10 @@ template {
 .coeur:checked ~ .coeur1 svg * {
   fill: rgb(255, 121, 218);
 }
+.coeur:checked ~ .coeur1 .heart-clip::before {
+  transform: scale(1);
+  opacity: 1;
+}
 
 .heart-container {
   position: relative;
@@ -654,12 +655,6 @@ template {
   position: relative;
   overflow: hidden;
   clip-path: url(#svgPath);
-  /*&.active {
-     animation: pulse 0.6s 0.3s forwards;
-  }*/
-}
-.heart-clip:hover {
-  /*animation: pulse 0.6s 0.3s infinite;*/
 }
 .heart-clip:hover::before {
   transform: scale(1);
@@ -671,7 +666,6 @@ template {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  /*background-color: $red;*/
   background: rgb(255, 121, 218);
   background: linear-gradient(175deg, rgb(255, 121, 218) 0%, rgb(178, 122, 227) 100%);
   opacity: 0;
@@ -689,20 +683,6 @@ template {
   fill: black;
 }
 
-/*
-@keyframes pulse {
-   0% {
-      transform: scale(1);
-   }
-
-   30% {
-      transform: scale(1.2);
-   }
-
-   60% {
-      transform: scale(1);
-   }
-}*/
 .navbar__arrow {
   position: absolute;
   top: 25px;
@@ -728,6 +708,7 @@ template {
   padding-top: 20px;
 }
 
+/* Menu de la carte */
 .carte {
   animation: apparition 1s ease-out;
 }
@@ -749,6 +730,7 @@ template {
   font-weight: 300;
 }
 
+/* Entrée, plat, dessert */
 .description {
   position: relative;
   border-radius: 20px;
@@ -760,6 +742,48 @@ template {
   width: auto;
   overflow: hidden;
   transition: 1s linear;
+  /*&__entitled {
+      margin: 0 0 15px 0;
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+      border-radius: 20px;
+
+      &__text {
+          margin: 5px 0;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+      }
+
+      /*&__price {
+          font-weight: 700;
+          margin: 5px 0;
+          transform: translateX(0px);
+          transition: 1s linear;
+      }
+  }*/
+  /*.check {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(80px);
+      background-color: #99e2d0;
+      height: 100%;
+      width: 80px;
+      border-radius: 0 20px 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 1s linear;
+
+      &__btn {
+          border-radius: 50%;
+          border: none;
+          background-color: white;
+      }
+  }*/
 }
 .description .descritpion-menu {
   width: 100%;
@@ -768,30 +792,30 @@ template {
 .description__title {
   margin: 15px 0 0 0;
   font-size: 20px;
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.description__entitled {
-  margin: 0 0 15px 0;
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: space-between;
-  border-radius: 20px;
-}
-.description__entitled__text {
-  margin: 5px 0;
+.description__text {
+  padding-left: 15px;
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.description__entitled__price {
+.description .validation {
+  position: absolute;
+  height: 100%;
+  left: calc(100% - 125px);
+  transform: translateX(70px);
+  transition: 1s linear;
+}
+.description .validation .check__price {
   font-weight: 700;
-  margin: 5px 0;
+  padding-right: 30px;
   transform: translateX(0px);
   transition: 1s linear;
 }
-.description .check {
-  /*display: none;*/
+.description .validation .check {
   position: absolute;
   top: 0;
   right: 0;
@@ -805,20 +829,25 @@ template {
   justify-content: center;
   transition: 1s linear;
 }
-.description .check__btn {
+.description .validation .check__btn {
   border-radius: 50%;
   border: none;
   background-color: white;
 }
-.description .fa-check {
+.description .validation .check__btn .fa-check {
   font-size: 20px;
-  transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.9s;
+}
+.description:hover {
+  /*.description__entitled__price {
+      transform: translateX(-80px);
+  }*/
 }
 .description:hover .description-menu {
   font-size: 20px;
   transition: ease-in-out 0.5s;
 }
-.description:hover .description__entitled__price {
+.description:hover .check__price {
   transform: translateX(-80px);
 }
 .description:hover .check {
@@ -829,17 +858,22 @@ template {
 }
 .description:hover .fa-check {
   transform: rotate(360deg);
-  transition: ease-in-out 0.5s 0.3s;
+  transition: ease-in-out 0.8s 0.3s;
 }
 
 .input_card {
   display: none;
 }
 
-.input_card:checked + .descritption .check {
-  transform: translateX(0px);
+.input_card:checked + .description {
+  /*.check {
+      transform: translateX(0px); 
+  }*/
 }
-.input_card:checked + .descritption .fa-check {
+.input_card:checked + .description .validation {
+  transform: translateX(-10px);
+}
+.input_card:checked + .description .fa-check {
   transform: rotate(360deg);
   transition: ease-in-out 0.5s 0.5s;
 }
@@ -956,6 +990,11 @@ template {
   }
 }
 @media screen and (min-width: 992px) {
+  .site {
+    margin: auto;
+    max-width: 1400px;
+    width: calc(100% - 30px);
+  }
   .section-functioning .functioning__cards {
     display: flex;
     flex-direction: row;
@@ -964,7 +1003,10 @@ template {
     top: 25px;
   }
   /*.main-resto {
-      margin: 0 70px;
+      border-radius: 50px 50px 0 0;
+      position: relative;
+      top: -50px;
+      height: 100%;
   }*/
   .resto-header {
     overflow: hidden;

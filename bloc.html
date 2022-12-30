@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmyfood !</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- JAVASCRIPT -->
+    <script src="https://kit.fontawesome.com/960c3e545d.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="body">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar--arrow">
+        <div class="navbar__arrow">
+            <a class="arrow__anchor" href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+        <div class="navbar__container">
+            <a href="index.html"> <img class="navbar__logo" src="assets/images/logo/ohmyfood.png" alt="logo"></a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="resto-header">
+        <div class="resto-header__container">
+            <img class="resto-container__imgResto" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française" />
+        </div>
+    </header>
+
+    <!-- CARD -->
+    <main class="main-resto ">
+        <section class="section-restos section-restos--taille site">
+            <header class="section-header">
+                <h2 class="header__title">A la française</h2>
+
+                 <!-- coeur animé -->
+                 <div class="resto-card__body__starResto starResto">
+                    <input type="checkbox" id="coeurA" class="coeur">
+                    <svg id='heart' height="0" width="0" >
+                        <defs>
+                            <clipPath id="svgPath">
+                                <path d="M20,35.09,4.55,19.64a8.5,8.5,0,0,1-.13-12l.13-.13a8.72,8.72,0,0,1,12.14,0L20,10.79l3.3-3.3a8.09,8.09,0,0,1,5.83-2.58,8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.13,12l-.13.13Z"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <label for="coeurA" class="coeur1">
+                        <div class="heart-container">
+                            <svg width="40" height="40" viewBox="0 0 40 40" class='heart-stroke' >
+                                <path d="M20,35.07,4.55,19.62a8.5,8.5,0,0,1-.12-12l.12-.12a8.72,8.72,0,0,1,12.14,0L20,10.77l3.3-3.3A8.09,8.09,0,0,1,29.13,4.9a8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.12,12l-.12.12ZM10.64,7.13A6.44,6.44,0,0,0,6.07,18.19L20,32.06,33.94,18.12A6.44,6.44,0,0,0,34,9l0,0a6.44,6.44,0,0,0-4.77-1.85A6,6,0,0,0,24.83,9L20,13.78,15.21,9A6.44,6.44,0,0,0,10.64,7.13Z"/>
+                            </svg>
+                            <span class='heart-clip'></span>
+                        </div>
+                    </label>
+                </div>
+            </header>
+            <div class="carte">
+                <!-- entrées -->
+                <div class="card-menu">
+                    <div class="card-menu__header">
+                        <h3 class="card-menu__title">ENTREES</h3>
+                    </div>
+                    <div class="card-menu__description">
+                       
+                        <div class="menu1">
+                            
+                                <input type="radio" name="entree" id="entree1" class="input_card">
+                                <label for="entree1" class="description">
+                                    
+                                    <div class="menu2">
+                                        <div class="descritpion-menu">
+                                            <h4 class="description__title">Tartare de poulpe acidulé</h4>
+                                            <p class="description__text">Aux zestes d'orange</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="menu3">
+                                        <p class="description__price">25€</p>
+                                        <div class="check">
+                                            <button class="check__btn">
+                                                <i class="fa-solid fa-check"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </label>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="menu-button">
+                <button class="button__command button">Commander</button>
+            </div>
+        </section>
+    </main>
+
+   
+</body>
+
+</html>

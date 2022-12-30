@@ -14,7 +14,10 @@ $color-black: #000;
     color: $color-grey;
 }
 
-.header-container, .section-restos {
+/*.header-container, .section-restos {
+    background-color: $color-grey-very-light;
+}*/
+.header-container, .section-restos, .main-resto {
     background-color: $color-grey-very-light;
 }
 
