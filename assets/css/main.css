@@ -713,6 +713,10 @@ template {
   animation: apparition 1s ease-out;
 }
 
+.card-menu {
+  margin-bottom: 50px;
+}
+
 .card-menu__header {
   position: relative;
 }
@@ -741,53 +745,10 @@ template {
   justify-content: space-between;
   width: auto;
   overflow: hidden;
-  transition: 1s linear;
-  /*&__entitled {
-      margin: 0 0 15px 0;
-      display: flex;
-      flex-direction: row;
-      align-items: baseline;
-      justify-content: space-between;
-      border-radius: 20px;
-
-      &__text {
-          margin: 5px 0;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-      }
-
-      /*&__price {
-          font-weight: 700;
-          margin: 5px 0;
-          transform: translateX(0px);
-          transition: 1s linear;
-      }
-  }*/
-  /*.check {
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translateX(80px);
-      background-color: #99e2d0;
-      height: 100%;
-      width: 80px;
-      border-radius: 0 20px 20px 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: 1s linear;
-
-      &__btn {
-          border-radius: 50%;
-          border: none;
-          background-color: white;
-      }
-  }*/
 }
-.description .descritpion-menu {
-  width: 100%;
-  transition: ease-in-out 0.5s 0.5s;
+.description .description-menu {
+  width: calc(100% - 30px);
+  transition: linear 0.5s;
 }
 .description__title {
   margin: 15px 0 0 0;
@@ -797,7 +758,7 @@ template {
   overflow: hidden;
 }
 .description__text {
-  padding-left: 15px;
+  padding-left: 5px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -805,21 +766,20 @@ template {
 .description .validation {
   position: absolute;
   height: 100%;
-  left: calc(100% - 125px);
-  transform: translateX(70px);
-  transition: 1s linear;
+  left: calc(100% - 40px);
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: linear 0.5s;
 }
 .description .validation .check__price {
   font-weight: 700;
-  padding-right: 30px;
-  transform: translateX(0px);
-  transition: 1s linear;
+  width: 30px;
+  margin: 0;
+  padding-right: 13px;
 }
 .description .validation .check {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateX(80px);
   background-color: #99e2d0;
   height: 100%;
   width: 80px;
@@ -839,16 +799,15 @@ template {
   transition: ease-in-out 0.9s;
 }
 .description:hover {
-  /*.description__entitled__price {
+  /*.check__price {
       transform: translateX(-80px);
   }*/
 }
 .description:hover .description-menu {
-  font-size: 20px;
-  transition: ease-in-out 0.5s;
+  width: calc(100% - 110px);
 }
-.description:hover .check__price {
-  transform: translateX(-80px);
+.description:hover .validation {
+  left: calc(100% - 110px);
 }
 .description:hover .check {
   /*display: block;
@@ -857,7 +816,7 @@ template {
   transform: translateX(0px);
 }
 .description:hover .fa-check {
-  transform: rotate(360deg);
+  transform: rotate(-360deg);
   transition: ease-in-out 0.8s 0.3s;
 }
 
@@ -870,26 +829,27 @@ template {
       transform: translateX(0px); 
   }*/
 }
+.input_card:checked + .description .description__title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.input_card:checked + .description .description__text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.input_card:checked + .description .description-menu {
+  width: calc(100% - 110px);
+}
 .input_card:checked + .description .validation {
-  transform: translateX(-10px);
+  left: calc(100% - 110px);
 }
 .input_card:checked + .description .fa-check {
   transform: rotate(360deg);
   transition: ease-in-out 0.5s 0.5s;
 }
 
-/* Partie valiadation verte dans l'intitulé du plat 
-@keyframes validation {
-    0% {
-        transform: translateX(100px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}*/
 /* Partie menu */
 @keyframes apparition {
   0% {

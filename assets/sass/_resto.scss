@@ -28,6 +28,10 @@
     animation: apparition 1s ease-out;
 }
 
+.card-menu {
+    margin-bottom: 50px;
+}
+
 .card-menu__header {
     position: relative;
     &::before {
@@ -56,12 +60,11 @@
     justify-content: space-between;
     width: auto;
     overflow: hidden;
-    transition: 1s linear ;
+    //transition: 1s linear ;
 
-    .descritpion-menu {
-        //width: 80%;
-        width: 100%;
-        transition: ease-in-out .5s .5s; 
+    .description-menu {
+        width: calc(100% - 30px);
+        transition: linear .5s; 
     }    
 
     &__title {
@@ -73,55 +76,50 @@
     }
 
     &__text {
-        padding-left: 15px;
+        padding-left: 5px;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
     }
-    /*&__entitled {
-        margin: 0 0 15px 0;
-        display: flex;
-        flex-direction: row;
-        align-items: baseline;
-        justify-content: space-between;
-        border-radius: 20px;
-        
-        &__text {
-            margin: 5px 0;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-        }
-
-        /*&__price {
-            font-weight: 700;
-            margin: 5px 0;
-            transform: translateX(0px);
-            transition: 1s linear;
-        }
-    }*/
 
     .validation {
         position: absolute;
         height: 100%;
-        left: calc(100% - 125px);
-        transform: translateX(70px);
-        transition: 1s linear;
+        //left: calc(100% - 30px);
+        left: calc(100% - 40px);
+        //transform: translateX(70px);
+        //transition: linear .5s;
+        //width: calc(80px + 60px);
+        width: calc(30px + 80px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //background-color: red;
+        transition: linear .5s; 
 
         .check__price {
             font-weight: 700;
-            padding-right: 30px;
-            transform: translateX(0px);
-            transition: 1s linear;
+            //padding-right: 30px;
+            //transform: translateX(0px);
+            //transition: 1s linear;
+            width: 30px;
+            //height: 100%;
+            margin: 0;
+            //padding: 0;
+            padding-right: 13px;
+            //background-color: blue;
+            //color: white;
+            
         }
         .check {
-            position: absolute;
-            top: 0;
-            right: 0;
-            transform: translateX(80px);
+            //position: absolute;
+            //top: 0;
+            //right: 0;
+            //transform: translateX(80px);
             background-color: #99e2d0;
             height: 100%;
-            width: 80px;
+            //width: 110px;
+            width:80px;
             border-radius: 0 20px 20px 0;
             display: flex;
             align-items: center;
@@ -138,43 +136,25 @@
                     transition: ease-in-out .9s;
                 }
             }
-        }
+        }    
     }
-
-    /*.check {
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translateX(80px);
-        background-color: #99e2d0;
-        height: 100%;
-        width: 80px;
-        border-radius: 0 20px 20px 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 1s linear;
-
-        &__btn {
-            border-radius: 50%;
-            border: none;
-            background-color: white;
-        }
-    }*/
 
     
     &:hover {
         .description-menu {
-            font-size: 20px;
-            transition: ease-in-out .5s;
+            //font-size: 20px;
+            //transition: ease-in-out .5s;
+            width: calc(100% - 110px);
         }
 
-        /*.description__entitled__price {
+        .validation {
+            left: calc(100% - 110px);
+        }
+
+        
+        /*.check__price {
             transform: translateX(-80px);
         }*/
-        .check__price {
-            transform: translateX(-80px);
-        }
 
         .check {
             /*display: block;
@@ -184,7 +164,7 @@
         }
 
         .fa-check {
-            transform: rotate(360deg);
+            transform: rotate(-360deg);
             transition: ease-in-out .8s .3s;
         }
     }
@@ -198,8 +178,27 @@
     /*.check {
         transform: translateX(0px); 
     }*/
+    .description {
+        &__title {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        &__text {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+
+    .description-menu {
+        width: calc(100% - 110px);
+    }
+
     .validation {
-        transform: translateX(-10px);
+        left: calc(100% - 110px);
+        //transform: translateX(-10px);
     }
     .fa-check { 
         transform: rotate(360deg); 
@@ -208,18 +207,6 @@
 }
     
 
-/* Partie valiadation verte dans l'intitulé du plat 
-@keyframes validation {
-    0% {
-        transform: translateX(100px);
-        opacity: 0;
-    }
-    
-    100% {
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}*/
 
 /* Partie menu */
 @keyframes apparition {
