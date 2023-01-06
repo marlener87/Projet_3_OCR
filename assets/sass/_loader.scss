@@ -9,11 +9,16 @@ body {
 
 .section {
     background-color: teal;
-    height: 200px;
-    line-height: 200px;
+    //background-color: rgba(255, 255, 128, .1);
+    height: 700px;
+    width: 100%;
+    //line-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.section2 {
+/*.section2 {
     background-color: blueviolet;
 }
 
@@ -23,11 +28,12 @@ body {
 
 .section4 {
     background-color: rosybrown;
-}
+}*/
 
 .loader {
     width: 50px;
     height: 50px;
+    margin-right: 40px;
     display: inline-block;
     vertical-align: middle;
     position: relative;
@@ -47,7 +53,7 @@ body {
         border: 6px solid transparent;
         border-top-color: white;
         border-radius: 50px;
-        animation: spin 5s linear infinite;
+        animation: spin 3s linear infinite;
     }
 }
 
@@ -158,7 +164,7 @@ body {
         transform: rotate(360deg);
     }
 }
-
+/*
 @keyframes spinreverse {
     0% {
         transform: rotate(0deg);
@@ -181,10 +187,10 @@ body {
         transform: scaleY(0);
         opacity: 0;
     }
-}
+}*/
 
 
-/* BUTTON */
+/* BUTTON 
 .playground {
     position: absolute;
     top: 50%;
@@ -245,4 +251,4 @@ button {
 
 .btn4:hover {
     background-position: top;
-}
+}*/
