@@ -369,6 +369,42 @@ template {
   font-size: 11px;
 }
 
+.apparition-1 {
+  animation: 4s apparition 0.5s ease-out;
+}
+
+.apparition-2 {
+  animation: 4s apparition 1s ease-out;
+}
+
+.apparition-3 {
+  animation: 4s apparition 1.5s ease-out;
+}
+
+.apparition-4 {
+  animation: 4s apparition 2s ease-out;
+}
+
+.nouveau-1 {
+  animation: 4s apparition 0.5s ease-out;
+}
+
+.nouveau-2 {
+  animation: 4s apparition 1s ease-out;
+}
+
+.description-1 {
+  animation: 2s apparition 0.5s ease-out;
+}
+
+.description-2 {
+  animation: 2s apparition 1s ease-out;
+}
+
+.description-3 {
+  animation: 2s apparition 1.5s ease-out;
+}
+
 .body {
   font-family: "Roboto", sans-serif;
 }
@@ -378,68 +414,6 @@ template {
   font-size: 30px;
 }
 
-/* LOADER */
-.section-loader {
-  background-color: #f5edff;
-  height: 100%;
-  width: 100%;
-  line-height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #9356DC;
-  font-size: 40px;
-  cursor: wait;
-  z-index: 9000;
-  position: fixed;
-  left: 0;
-  top: 0;
-  animation: 3s opaque forwards;
-}
-
-.loader {
-  width: 50px;
-  height: 50px;
-  margin-right: 40px;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  border-radius: 50px;
-  border: 6px solid rgba(255, 255, 255, 0.4);
-}
-.loader:after {
-  position: absolute;
-  content: "";
-  top: -6px;
-  left: -6px;
-  bottom: -6px;
-  right: -6px;
-  border: 6px solid transparent;
-  border-top-color: #9356DC;
-  border-radius: 50px;
-  animation: spin 3s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes opaque {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    display: none;
-  }
-}
 /* Logo */
 .navbar {
   -webkit-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.4);
@@ -726,10 +700,6 @@ template {
 }
 
 /* Menu de la carte */
-.carte {
-  animation: apparition 1s ease-out;
-}
-
 .card-menu {
   margin-bottom: 50px;
 }
@@ -863,7 +833,7 @@ template {
   left: calc(100% - 110px);
 }
 .input_card:checked + .description .fa-check {
-  transform: rotate(360deg);
+  transform: rotate(-360deg);
   transition: ease-in-out 0.5s 0.5s;
 }
 
@@ -1026,6 +996,67 @@ template {
   }
   .footer-list {
     padding-right: 100px !important;
+  }
+}
+.section-loader {
+  background-color: #f5edff;
+  height: 100%;
+  width: 100%;
+  line-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #9356DC;
+  font-size: 40px;
+  cursor: wait;
+  z-index: 9000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  animation: 2s opaque forwards;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  margin-right: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  border-radius: 50px;
+  border: 6px solid rgba(255, 255, 255, 0.4);
+}
+.loader:after {
+  position: absolute;
+  content: "";
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border: 6px solid transparent;
+  border-top-color: #9356DC;
+  border-radius: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes opaque {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 

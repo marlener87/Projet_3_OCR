@@ -24,10 +24,6 @@
 }
 
 /* Menu de la carte */ 
-.carte {
-    animation: apparition 1s ease-out;
-}
-
 .card-menu {
     margin-bottom: 50px;
 }
@@ -50,6 +46,9 @@
 }
 
 /* Entrée, plat, dessert */
+
+
+
 .description {
     position: relative;
     border-radius: 20px;
@@ -201,7 +200,7 @@
         //transform: translateX(-10px);
     }
     .fa-check { 
-        transform: rotate(360deg); 
+        transform: rotate(-360deg); 
         transition: ease-in-out .5s .5s ; 
     } 
 }

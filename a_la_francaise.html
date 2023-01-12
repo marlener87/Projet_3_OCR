@@ -16,6 +16,12 @@
 </head>
 
 <body class="body">
+    <!-- LOADER 
+    <div class="section-loader">
+        <span class="loader"></span>
+        Chargement...
+    </div>-->
+
     <!-- NAVBAR -->
     <nav class="navbar navbar--arrow">
         <div class="navbar__arrow">
@@ -29,7 +35,7 @@
     <!-- HEADER -->
     <header class="resto-header">
         <div class="resto-header__container">
-            <img class="resto-container__imgResto" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française" />
+            <img class="resto-container__imgResto" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française">
         </div>
     </header>
 
@@ -39,8 +45,8 @@
             <header class="section-header">
                 <h2 class="header__title">A la française</h2>
 
-                 <!-- coeur animé -->
-                 <div class="resto-card__body__starResto starResto">
+                <!-- coeur animé -->
+                <div class="resto-card__body__starResto starResto">
                     <input type="checkbox" id="coeurA" class="coeur">
                     <svg id='heart' height="0" width="0" >
                         <defs>
@@ -49,13 +55,11 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <label for="coeurA" class="coeur1">
-                        <div class="heart-container">
-                            <svg width="40" height="40" viewBox="0 0 40 40" class='heart-stroke' >
-                                <path d="M20,35.07,4.55,19.62a8.5,8.5,0,0,1-.12-12l.12-.12a8.72,8.72,0,0,1,12.14,0L20,10.77l3.3-3.3A8.09,8.09,0,0,1,29.13,4.9a8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.12,12l-.12.12ZM10.64,7.13A6.44,6.44,0,0,0,6.07,18.19L20,32.06,33.94,18.12A6.44,6.44,0,0,0,34,9l0,0a6.44,6.44,0,0,0-4.77-1.85A6,6,0,0,0,24.83,9L20,13.78,15.21,9A6.44,6.44,0,0,0,10.64,7.13Z"/>
-                            </svg>
-                            <span class='heart-clip'></span>
-                        </div>
+                    <label for="coeurA" class="coeur1 heart-container">
+                        <svg width="40" height="40" viewBox="0 0 40 40" class='heart-stroke' >
+                            <path d="M20,35.07,4.55,19.62a8.5,8.5,0,0,1-.12-12l.12-.12a8.72,8.72,0,0,1,12.14,0L20,10.77l3.3-3.3A8.09,8.09,0,0,1,29.13,4.9a8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.12,12l-.12.12ZM10.64,7.13A6.44,6.44,0,0,0,6.07,18.19L20,32.06,33.94,18.12A6.44,6.44,0,0,0,34,9l0,0a6.44,6.44,0,0,0-4.77-1.85A6,6,0,0,0,24.83,9L20,13.78,15.21,9A6.44,6.44,0,0,0,10.64,7.13Z"/>
+                        </svg>
+                        <span class='heart-clip'></span>
                     </label>
                 </div>
             </header>
@@ -68,7 +72,7 @@
                     <div class="card-menu__description">
                         <!-- 1 -->
                         <input type="radio" name="entree" id="entree1" class="input_card">
-                        <label for="entree1" class="description">
+                        <label for="entree1" class="description description-1">
                             <div class="description-menu">
                                 <h4 class="description__title">Tartare de poulpe acidulé</h4>  
                                 <p class="description__text">Aux zestes d'orange</p>  
@@ -85,7 +89,7 @@
 
                         <!-- 2 -->
                         <input type="radio" name="entree" id="entree2" class="input_card">
-                        <label for="entree2" class="description">
+                        <label for="entree2" class="description description-2">
                             <div class="description-menu">
                                 <h4 class="description__title">Velouté de légumes d'antan</h4>  
                                 <p class="description__text">Carotte, panais, topinambour</p>  
@@ -103,7 +107,7 @@
 
                         <!-- 3 -->
                         <input type="radio" name="entree" id="entree3" class="input_card">
-                        <label for="entree3" class="description">
+                        <label for="entree3" class="description description-3">
                             <div class="description-menu">
                                 <h4 class="description__title">Soupe à l'oignon</h4> 
                                 <p class="description__text">Revisitée</p>    
@@ -126,7 +130,7 @@
                     </div>
                     <div class="card-menu__description">
                         <input type="radio" name="plat" id="plat1" class="input_card">
-                        <label for="plat1" class="description">
+                        <label for="plat1" class="description description-1">
                             <div class="description-menu">
                                 <h4 class="description__title">Coquilles Saint-Jacques</h4>
                                 <p class="description__text">Accompagnées d'une purée de panais</p>     
@@ -142,7 +146,7 @@
                         </label>
 
                         <input type="radio" name="plat" id="plat2" class="input_card">
-                        <label for="plat2" class="description">
+                        <label for="plat2" class="description description-2">
                             <div class="description-menu">
                                 <h4 class="description__title">Magret de canard</h4>
                                 <p class="description__text">Et parmentier de pommes de terre</p>      
@@ -158,7 +162,7 @@
                         </label>
                         
                         <input type="radio" name="plat" id="plat3" class="input_card">
-                        <label for="plat3" class="description">
+                        <label for="plat3" class="description description-3">
                             <div class="description-menu">
                                 <h4 class="description__title">Pigeonneau d'Ille-et-Vilaine</h4>  
                                 <p class="description__text">Sur son lit de gnocchis aux légumes</p>   
@@ -181,7 +185,7 @@
                     </div>
                     <div class="card-menu__description">
                         <input type="radio" name="dessert" id="dessert1" class="input_card">
-                        <label for="dessert1" class="description">
+                        <label for="dessert1" class="description description-1">
                             <div class="description-menu">
                                 <h4 class="description__title">Pétales de violettes glacés</h4> 
                                 <p class="description__text">Et purée de noisettes</p>     
@@ -197,7 +201,7 @@
                         </label>
 
                         <input type="radio" name="dessert" id="dessert2" class="input_card">
-                        <label for="dessert2" class="description">
+                        <label for="dessert2" class="description description-2">
                             <div class="description-menu">
                                 <h4 class="description__title">Fondant au chocolat</h4> 
                                 <p class="description__text">Revisité</p>    
@@ -213,7 +217,7 @@
                         </label>
 
                         <input type="radio" name="dessert" id="dessert3" class="input_card">
-                        <label for="dessert3" class="description">
+                        <label for="dessert3" class="description description-3">
                             <div class="description-menu">
                                 <h4 class="description__title">Millefeuille croustillant</h4>
                                 <p class="description__text">Myrtilles et pâte d'amande</p>      
