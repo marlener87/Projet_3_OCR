@@ -46,9 +46,6 @@
 }
 
 /* Entrée, plat, dessert */
-
-
-
 .description {
     position: relative;
     border-radius: 20px;
@@ -57,6 +54,7 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: auto;
     overflow: hidden;
     //transition: 1s linear ;
@@ -84,40 +82,22 @@
     .validation {
         position: absolute;
         height: 100%;
-        //left: calc(100% - 30px);
         left: calc(100% - 40px);
-        //transform: translateX(70px);
-        //transition: linear .5s;
-        //width: calc(80px + 60px);
         width: calc(30px + 80px);
         display: flex;
         align-items: center;
         justify-content: center;
-        //background-color: red;
         transition: linear .5s; 
 
         .check__price {
             font-weight: 700;
-            //padding-right: 30px;
-            //transform: translateX(0px);
-            //transition: 1s linear;
             width: 30px;
-            //height: 100%;
             margin: 0;
-            //padding: 0;
             padding-right: 13px;
-            //background-color: blue;
-            //color: white;
-            
         }
         .check {
-            //position: absolute;
-            //top: 0;
-            //right: 0;
-            //transform: translateX(80px);
             background-color: #99e2d0;
             height: 100%;
-            //width: 110px;
             width:80px;
             border-radius: 0 20px 20px 0;
             display: flex;
@@ -129,6 +109,7 @@
                 border-radius: 50%;
                 border: none;
                 background-color: white;
+                padding: 5px;
 
                 .fa-check {
                     font-size: 20px;
@@ -141,8 +122,6 @@
     
     &:hover {
         .description-menu {
-            //font-size: 20px;
-            //transition: ease-in-out .5s;
             width: calc(100% - 110px);
         }
 
@@ -150,15 +129,9 @@
             left: calc(100% - 110px);
         }
 
-        
-        /*.check__price {
-            transform: translateX(-80px);
-        }*/
-
         .check {
-            /*display: block;
             transition: transform 0.5s ease-out;
-            animation: validation 1s forwards;*/
+            animation: validation 1s forwards;
             transform: translateX(0px);
         }
 
@@ -174,9 +147,6 @@
 }
 
 .input_card:checked + .description {
-    /*.check {
-        transform: translateX(0px); 
-    }*/
     .description {
         &__title {
             white-space: nowrap;
@@ -197,7 +167,6 @@
 
     .validation {
         left: calc(100% - 110px);
-        //transform: translateX(-10px);
     }
     .fa-check { 
         transform: rotate(-360deg); 

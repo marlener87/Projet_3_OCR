@@ -1,7 +1,7 @@
 // Accueil
 @for $i from 1 through 4 {
     .apparition-#{$i} {
-        animation: 4s apparition 0.5s*$i ease-out;
+        animation: apparition 1s*$i 1.5s ease-out;
     }
 }
 

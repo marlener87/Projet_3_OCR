@@ -370,19 +370,19 @@ template {
 }
 
 .apparition-1 {
-  animation: 4s apparition 0.5s ease-out;
+  animation: apparition 1s 1.5s ease-out;
 }
 
 .apparition-2 {
-  animation: 4s apparition 1s ease-out;
+  animation: apparition 2s 1.5s ease-out;
 }
 
 .apparition-3 {
-  animation: 4s apparition 1.5s ease-out;
+  animation: apparition 3s 1.5s ease-out;
 }
 
 .apparition-4 {
-  animation: 4s apparition 2s ease-out;
+  animation: apparition 4s 1.5s ease-out;
 }
 
 .nouveau-1 {
@@ -730,6 +730,7 @@ template {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: auto;
   overflow: hidden;
 }
@@ -780,15 +781,11 @@ template {
   border-radius: 50%;
   border: none;
   background-color: white;
+  padding: 5px;
 }
 .description .validation .check__btn .fa-check {
   font-size: 20px;
   transition: ease-in-out 0.9s;
-}
-.description:hover {
-  /*.check__price {
-      transform: translateX(-80px);
-  }*/
 }
 .description:hover .description-menu {
   width: calc(100% - 110px);
@@ -797,9 +794,8 @@ template {
   left: calc(100% - 110px);
 }
 .description:hover .check {
-  /*display: block;
   transition: transform 0.5s ease-out;
-  animation: validation 1s forwards;*/
+  animation: validation 1s forwards;
   transform: translateX(0px);
 }
 .description:hover .fa-check {
@@ -811,11 +807,6 @@ template {
   display: none;
 }
 
-.input_card:checked + .description {
-  /*.check {
-      transform: translateX(0px); 
-  }*/
-}
 .input_card:checked + .description .description__title {
   white-space: nowrap;
   text-overflow: ellipsis;
