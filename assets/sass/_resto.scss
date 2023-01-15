@@ -37,7 +37,7 @@
         left: 0; 
         width: 50px;
         height: 4px;
-        background-color: #99e2d0;  
+        background-color: $color-validation;  
     }
 }
 
@@ -54,10 +54,8 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     width: auto;
     overflow: hidden;
-    //transition: 1s linear ;
 
     .description-menu {
         width: calc(100% - 30px);
@@ -96,7 +94,7 @@
             padding-right: 13px;
         }
         .check {
-            background-color: #99e2d0;
+            background-color: $color-validation;
             height: 100%;
             width:80px;
             border-radius: 0 20px 20px 0;
@@ -108,8 +106,12 @@
             &__btn {
                 border-radius: 50%;
                 border: none;
-                background-color: white;
-                padding: 5px;
+                background-color: $color-white;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
                 .fa-check {
                     font-size: 20px;

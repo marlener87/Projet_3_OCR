@@ -1,0 +1,26 @@
+.footer {
+    padding: 30px;
+
+    .footer-container__logo {
+        height: 30px;
+        * {
+            fill: $color-white;
+        }
+    }
+
+    .footer-list {
+        padding: 0;
+
+        &__item {
+            list-style-type: none;
+            padding: 5px;
+        }
+        &__lien {
+            text-decoration: none;
+    
+            &--espace {
+                padding-left: 5px;
+            }
+        }
+    }  
+}

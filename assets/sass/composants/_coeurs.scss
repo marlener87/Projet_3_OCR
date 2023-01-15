@@ -1,0 +1,60 @@
+// COEUR ANIME
+.coeur {
+    display: none;
+}
+
+.coeur:checked ~ .coeur1 {
+    svg * {
+        fill: $color-bc-btn-hover;
+    }
+    .heart-clip::before {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+$black: $color-black;
+
+.heart-container {
+   position: relative;
+   width: 40px;
+   height: 40px;
+}
+
+.heart-clip {
+   display: block;
+   width: 100%;
+   height: 100%;
+   position: relative;
+   overflow: hidden;
+   clip-path: url(#svgPath);
+
+   &:hover {
+      &::before {
+         transform: scale(1);
+         opacity: 1;
+      }
+   }
+   &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: $color-bc-btn-hover;
+        background: linear-gradient(175deg, rgba(255,121,218,1) 0%, rgba(178,122,227,1) 100%);
+        opacity: 0;
+        transform: scale(0);
+        transition: transform 0.2s linear, opacity 0.2s linear;
+        transform-origin: center 60%;
+   }
+}
+
+.heart-stroke {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   fill: $black;
+}

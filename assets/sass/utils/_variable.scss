@@ -1,12 +1,15 @@
 $color-purple: #9356DC;
 $color-parme: #f5edff;
 $color-pink: #ff79da;
-$color-green: #99e2d0;
+$color-validation: #99e2d0;
+$color-new-resto: #139273;
 $color-grey-light: #eaeaea;
 $color-grey-very-light: #f7f7f7;
 $color-grey: #353535;
 $color-white: #fff;
 $color-black: #000;
+$color-bg-btn: rgb(237,115,218);
+$color-bc-btn-hover: rgb(255,121,218);
 
 
 .localisation {
@@ -42,7 +45,7 @@ $color-black: #000;
 }
 
 .fa-check {
-    color: $color-green;
+    color: $color-validation;
 }
 
 .card-function {

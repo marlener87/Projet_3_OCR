@@ -1,0 +1,23 @@
+.button {
+    background: $color-bg-btn;
+    background: linear-gradient(175deg, rgba(237,115,218,1) 0%, rgba(159,90,220,1) 100%);   
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 25px;
+    font-size: 17px;
+    border: none;
+    color: $color-white;
+    font-weight: 500;
+    height: 50px;
+    cursor: pointer;
+
+    &:hover {
+        background: $color-bc-btn-hover;
+        background: linear-gradient(175deg, rgba(255,121,218,1) 0%, rgba(178,122,227,1) 100%);
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    }
+}
+
+.ancre {
+    color: $color-white;
+    text-decoration: none;
+}

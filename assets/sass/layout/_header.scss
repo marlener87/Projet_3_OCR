@@ -1,0 +1,53 @@
+.page-header {
+    z-index: 700;
+    position: relative;
+}
+
+.localisation {
+    display: flex;
+    justify-content: center;
+
+    .localisation-position {
+        position: relative;
+    }
+
+    &__img {
+        position: absolute;
+        top: 15px;
+        left: -35px;
+    }
+
+    .fa-location-dot {
+        font-size: 19px;
+    }
+    
+    &__title {
+        font-size: 19px;
+        font-weight: bold;
+        border: none;
+        margin: 15px 0;
+    }
+}
+
+.header-container {
+    padding: 30px 15px 55px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    &__text {
+        font-size: 18px;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    &__button {      
+        padding: 0 25px;
+    }
+}
