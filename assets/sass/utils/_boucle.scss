@@ -1,3 +1,16 @@
+/* Partie menu */
+@keyframes apparition {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
 // Accueil
 @for $i from 1 through 4 {
     .apparition-#{$i} {

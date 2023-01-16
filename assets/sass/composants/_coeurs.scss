@@ -33,6 +33,7 @@ $black: $color-black;
       &::before {
          transform: scale(1);
          opacity: 1;
+         cursor: pointer;
       }
    }
    &::before {
@@ -42,7 +43,7 @@ $black: $color-black;
         height: 100%;
         border-radius: 50%;
         background: $color-bc-btn-hover;
-        background: linear-gradient(175deg, rgba(255,121,218,1) 0%, rgba(178,122,227,1) 100%);
+        background: linear-gradient(175deg, $color-heart1 0%, $color-heart2 100%);
         opacity: 0;
         transform: scale(0);
         transition: transform 0.2s linear, opacity 0.2s linear;
@@ -57,4 +58,16 @@ $black: $color-black;
    top: 0;
    left: 0;
    fill: $black;
+}
+
+
+
+/* Coeur resto */
+.coeurResto {
+   padding-right: 30px;
+   padding-top: 20px;
+}
+
+.coeur {
+   padding-right: 30px;
 }

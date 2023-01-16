@@ -1,12 +1,12 @@
 .section-loader {
-    background-color: #f5edff;
+    background-color: $color-parme;
     height: 100%;
     width: 100%;
     line-height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #9356DC;
+    color: $color-purple;
     font-size: 40px;
     cursor: wait;
     z-index: 9000;
@@ -24,7 +24,7 @@
     vertical-align: middle;
     position: relative;
     border-radius: 50px; // pour faire le cercle
-    border: 6px solid rgba(255, 255, 255, 0.4); // mise en page du cercle
+    border: 6px solid $color-border; // mise en page du cercle
 
     &:after {
         position: absolute;
@@ -34,7 +34,7 @@
         bottom: -6px;
         right: -6px;
         border: 6px solid transparent;
-        border-top-color: #9356DC;
+        border-top-color: $color-purple;
         border-radius: 50px;
         animation: spin 2s linear infinite;
     }

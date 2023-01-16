@@ -1,7 +1,10 @@
 .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: $color-bg-btn;
-    background: linear-gradient(175deg, rgba(237,115,218,1) 0%, rgba(159,90,220,1) 100%);   
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background: linear-gradient(175deg, $color-btn-light 0%, $color-btn-dark 100%);   
+    box-shadow: 0 4px 8px 0 $color-box-shadow;
     border-radius: 25px;
     font-size: 17px;
     border: none;
@@ -12,12 +15,24 @@
 
     &:hover {
         background: $color-bc-btn-hover;
-        background: linear-gradient(175deg, rgba(255,121,218,1) 0%, rgba(178,122,227,1) 100%);
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+        background: linear-gradient(175deg, $color-heart1 0%, $color-heart2 100%);
+        box-shadow: 0 4px 8px 0 $color-box-shadow-dark;
     }
 }
 
 .ancre {
     color: $color-white;
     text-decoration: none;
+}
+
+
+/* Bouton 'commander' dans les parties restaurants */
+.menu-button {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.button__command {
+    padding: 0 50px;
 }

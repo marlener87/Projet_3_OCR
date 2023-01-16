@@ -1,57 +1,44 @@
-.navbar__arrow {
-    position: absolute;
-    top: 25px;
+.input_card {
+    display: none;
 }
 
-.fa-arrow-left {
-    font-size: 20px;
-}
+.input_card:checked + .description {
+    .description {
+        &__title {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
 
-/* HEADER */
-.resto-container__imgResto {
-    width: 100%;
-}
-
-/* CARD */
-.section-header {
-    display: flex;
-    justify-content: space-between;
-}
-
-.starResto {
-    padding-right: 30px;
-    padding-top: 20px;
-}
-
-/* Menu de la carte */ 
-.card-menu {
-    margin-bottom: 50px;
-}
-
-.card-menu__header {
-    position: relative;
-    &::before {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        left: 0; 
-        width: 50px;
-        height: 4px;
-        background-color: $color-validation;  
+        &__text {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
     }
+
+    .description-menu {
+        width: calc(100% - 110px);
+    }
+
+    .validation {
+        left: calc(100% - 110px);
+    }
+    .fa-check { 
+        transform: rotate(-360deg); 
+        transition: ease-in-out .5s .5s; 
+    } 
 }
 
-.card-menu__title {
-    font-weight: 300;
-}
 
 /* Entrée, plat, dessert */
 .description {
+    cursor: pointer;
     position: relative;
     border-radius: 20px;
     padding: 0 15px;
     margin: 20px 0;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 $color-box-shadow;
     display: flex;
     justify-content: space-between;
     width: auto;
@@ -142,75 +129,4 @@
             transition: ease-in-out .8s .3s;
         }
     }
-}
-
-.input_card {
-    display: none;
-}
-
-.input_card:checked + .description {
-    .description {
-        &__title {
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-        }
-
-        &__text {
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-        }
-    }
-
-    .description-menu {
-        width: calc(100% - 110px);
-    }
-
-    .validation {
-        left: calc(100% - 110px);
-    }
-    .fa-check { 
-        transform: rotate(-360deg); 
-        transition: ease-in-out .5s .5s ; 
-    } 
-}
-    
-
-
-/* Partie menu */
-@keyframes apparition {
-    0% {
-        transform: translateY(100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-
-
-
-
-
-.menu-button {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
-}
-
-.button__command {
-    padding: 0 50px;
-}
-
-.coeur {
-    padding-right: 30px;
-}
-
-.section-restos {
-    padding: 10px 20px;
-    z-index: 900;
-    position: relative;
 }

@@ -369,6 +369,17 @@ template {
   font-size: 11px;
 }
 
+/* Partie menu */
+@keyframes apparition {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 .apparition-1 {
   animation: apparition 1s 1.5s ease-out;
 }
@@ -476,6 +487,9 @@ template {
   }
 }
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgb(237, 115, 218);
   background: linear-gradient(175deg, rgb(237, 115, 218) 0%, rgb(159, 90, 220) 100%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -496,6 +510,17 @@ template {
 .ancre {
   color: #fff;
   text-decoration: none;
+}
+
+/* Bouton 'commander' dans les parties restaurants */
+.menu-button {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.button__command {
+  padding: 0 50px;
 }
 
 .coeur {
@@ -527,6 +552,7 @@ template {
 .heart-clip:hover::before {
   transform: scale(1);
   opacity: 1;
+  cursor: pointer;
 }
 .heart-clip::before {
   content: "";
@@ -549,6 +575,57 @@ template {
   top: 0;
   left: 0;
   fill: #000;
+}
+
+/* Coeur resto */
+.coeurResto {
+  padding-right: 30px;
+  padding-top: 20px;
+}
+
+.coeur {
+  padding-right: 30px;
+}
+
+.resto-card {
+  text-decoration: none;
+  display: block;
+  margin: 25px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+.resto-card__img {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 17px 17px 0 0;
+}
+.resto-card__img__resto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.resto-card__body {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.resto-card__body__lieu {
+  text-decoration: none;
+  color: #000;
+}
+.resto-card__body__starResto {
+  display: flex;
+}
+.resto-card .resto {
+  margin: 0 0 5px;
+  font-size: 22px;
+}
+.resto-card .resto--strong {
+  font-weight: 800;
 }
 
 .footer {
@@ -642,151 +719,34 @@ template {
   height: 35px;
 }
 
-/* section fonctionnement */
-.section-functioning {
-  padding: 20px;
-}
-.section-functioning .card-function {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  border-radius: 20px;
-  margin: 20px 0;
-  position: relative;
-}
-.section-functioning .card-function__nb {
-  border-radius: 50%;
-  padding: 5px;
-  width: 15px;
-  height: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  position: absolute;
-  left: -10px;
-  top: calc(50% - 15px);
-}
-.section-functioning .card-function__text {
-  font-weight: 600;
-  padding: 0 10px;
-  margin: 25px 0;
-}
-.section-functioning .card-function .fa-solid {
-  padding: 0 40px;
-  font-size: 20px;
+.input_card {
+  display: none;
 }
 
-/* Restaurants */
-.nouveau__text {
-  background-color: #99e2d0;
-  color: #139273;
-  position: absolute;
-  font-weight: 700;
-  top: 20px;
-  right: 20px;
-  padding: 7px 10px;
-}
-
-.section-restos {
-  padding: 10px 20px;
-  z-index: 900;
-  position: relative;
-}
-.section-restos--taille {
-  border-radius: 50px;
-  margin-top: -50px;
-}
-.section-restos .resto-card {
-  text-decoration: none;
-  display: block;
-  margin: 25px 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-}
-.section-restos .resto-card__img {
-  height: 200px;
-  position: relative;
+.input_card:checked + .description .description__title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
-  border-radius: 17px 17px 0 0;
 }
-.section-restos .resto-card__img__resto {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.input_card:checked + .description .description__text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.section-restos .resto-card__body {
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 0 0 20px 20px;
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
+.input_card:checked + .description .description-menu {
+  width: calc(100% - 110px);
 }
-.section-restos .resto-card__body__lieu {
-  text-decoration: none;
-  color: #000;
+.input_card:checked + .description .validation {
+  left: calc(100% - 110px);
 }
-.section-restos .resto-card__body__starResto {
-  display: flex;
-}
-.section-restos .resto-card .resto {
-  margin: 0 0 5px;
-  font-size: 22px;
-}
-.section-restos .resto-card .resto--strong {
-  font-weight: 800;
-}
-
-.navbar__arrow {
-  position: absolute;
-  top: 25px;
-}
-
-.fa-arrow-left {
-  font-size: 20px;
-}
-
-/* HEADER */
-.resto-container__imgResto {
-  width: 100%;
-}
-
-/* CARD */
-.section-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.starResto {
-  padding-right: 30px;
-  padding-top: 20px;
-}
-
-/* Menu de la carte */
-.card-menu {
-  margin-bottom: 50px;
-}
-
-.card-menu__header {
-  position: relative;
-}
-.card-menu__header::before {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 50px;
-  height: 4px;
-  background-color: #99e2d0;
-}
-
-.card-menu__title {
-  font-weight: 300;
+.input_card:checked + .description .fa-check {
+  transform: rotate(-360deg);
+  transition: ease-in-out 0.5s 0.5s;
 }
 
 /* Entrée, plat, dessert */
 .description {
+  cursor: pointer;
   position: relative;
   border-radius: 20px;
   padding: 0 15px;
@@ -870,60 +830,108 @@ template {
   transition: ease-in-out 0.8s 0.3s;
 }
 
-.input_card {
-  display: none;
+/* section fonctionnement */
+.section-functioning {
+  padding: 20px;
 }
-
-.input_card:checked + .description .description__title {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.input_card:checked + .description .description__text {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.input_card:checked + .description .description-menu {
-  width: calc(100% - 110px);
-}
-.input_card:checked + .description .validation {
-  left: calc(100% - 110px);
-}
-.input_card:checked + .description .fa-check {
-  transform: rotate(-360deg);
-  transition: ease-in-out 0.5s 0.5s;
-}
-
-/* Partie menu */
-@keyframes apparition {
-  0% {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-.menu-button {
+.section-functioning .card-function {
   display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  border-radius: 20px;
+  margin: 20px 0;
+  position: relative;
+}
+.section-functioning .card-function__nb {
+  border-radius: 50%;
+  padding: 5px;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  margin: 40px 0;
+  font-size: 12px;
+  position: absolute;
+  left: -10px;
+  top: calc(50% - 15px);
+}
+.section-functioning .card-function__text {
+  font-weight: 600;
+  padding: 0 10px;
+  margin: 25px 0;
+}
+.section-functioning .card-function .fa-solid {
+  padding: 0 40px;
+  font-size: 20px;
 }
 
-.button__command {
-  padding: 0 50px;
-}
-
-.coeur {
-  padding-right: 30px;
+/* Restaurants */
+.nouveau__text {
+  background-color: #99e2d0;
+  color: #139273;
+  position: absolute;
+  font-weight: 700;
+  top: 20px;
+  right: 20px;
+  padding: 7px 10px;
 }
 
 .section-restos {
   padding: 10px 20px;
   z-index: 900;
   position: relative;
+}
+.section-restos--taille {
+  border-radius: 50px;
+  margin-top: -50px;
+}
+
+.navbar__arrow {
+  position: absolute;
+  top: 25px;
+}
+
+.fa-arrow-left {
+  font-size: 20px;
+}
+
+/* HEADER */
+.resto-container__imgResto {
+  width: 100%;
+}
+
+/* CARD */
+.section-restos {
+  padding: 10px 20px;
+  z-index: 900;
+  position: relative;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Menu de la carte */
+.card-menu {
+  margin-bottom: 50px;
+}
+
+.card-menu__header {
+  position: relative;
+}
+.card-menu__header::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background-color: #99e2d0;
+}
+
+.card-menu__title {
+  font-weight: 300;
 }
 
 @media screen and (min-width: 768px) {
@@ -1007,12 +1015,6 @@ template {
   .section-functioning .functioning__cards .card-function__text {
     top: 25px;
   }
-  /*.main-resto {
-      border-radius: 50px 50px 0 0;
-      position: relative;
-      top: -50px;
-      height: 100%;
-  }*/
   .resto-header {
     overflow: hidden;
     position: relative;

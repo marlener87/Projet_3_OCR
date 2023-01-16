@@ -1,0 +1,48 @@
+.navbar__arrow {
+    position: absolute;
+    top: 25px;
+}
+
+.fa-arrow-left {
+    font-size: 20px;
+}
+
+/* HEADER */
+.resto-container__imgResto {
+    width: 100%;
+}
+
+/* CARD */
+.section-restos {
+    padding: 10px 20px;
+    z-index: 900;
+    position: relative;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Menu de la carte */ 
+.card-menu {
+    margin-bottom: 50px;
+}
+
+.card-menu__header {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0; 
+        width: 50px;
+        height: 4px;
+        background-color: $color-validation;  
+    }
+}
+
+.card-menu__title {
+    font-weight: 300;
+}
