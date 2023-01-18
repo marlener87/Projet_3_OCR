@@ -1,3 +1,100 @@
+/* TABLETTE */
+@media screen and (min-width: 768px) {
+    .section-functioning {
+        .functioning__cards {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+    
+            .card-function {
+                padding: 10px 0;
+                position: relative;
+                width: calc(100% / 3 - 20px);
+    
+                &:last-child {
+                    margin-right: 0;
+                }
+    
+                .fa-solid {
+                    padding: 15px 30px;
+                }
+    
+                &__text {
+                    margin: 0;
+                    padding: 0 20px 0 0;
+                    position: absolute;
+                    left: 70px;
+                    top: 15px;
+                }
+            }
+        } 
+    }
+    
+    .resto-header {
+        height: 500px;
+    }
+    
+    .restos__title {
+        margin: 15px;
+    }
+    
+    .restos__cards {
+        display: flex;
+        flex-wrap: wrap;
+    
+        .resto-card {
+            margin: 15px;
+            width: 45%;
+        }
+    }
+      
+    .card-menu__description {
+        display: flex;
+        justify-content: center;
+        //
+        flex-wrap: wrap;
+    
+        .description {
+            margin-right: 20px;
+            //width: calc(100% / 3 - 5px);
+            width: calc(43% - 5px);
+    
+            &__entitled {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                flex-direction: column;
+                margin-left: 10px;
+                width: calc(100% - 15px);
+               
+            }
+    
+            &:hover {
+                .description__entitled__price {
+                    transform: translateX(0px);
+                }
+            }
+        }
+    }
+    
+    
+    .footer-list {
+        display: flex;
+        justify-content: space-between;
+    }    
+}
+    
+    
+
+@media screen and (min-width: 875px) {
+    .card-function__text {
+        top: 26px;
+    }
+}
+
+
+
+/* ORDINATEUR */
 @media screen and (min-width: 992px) {
     .site {
         margin: auto;

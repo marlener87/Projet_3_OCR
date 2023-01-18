@@ -934,6 +934,7 @@ template {
   font-weight: 300;
 }
 
+/* TABLETTE */
 @media screen and (min-width: 768px) {
   .section-functioning .functioning__cards {
     display: flex;
@@ -942,7 +943,6 @@ template {
   }
   .section-functioning .functioning__cards .card-function {
     padding: 10px 0;
-    /*margin-right: 20px;*/
     position: relative;
     width: calc(33.3333333333% - 20px);
   }
@@ -975,11 +975,12 @@ template {
   }
   .card-menu__description {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .card-menu__description .description {
     margin-right: 20px;
-    width: calc(33.3333333333% - 5px);
+    width: calc(43% - 5px);
   }
   .card-menu__description .description__entitled {
     display: flex;
@@ -1002,6 +1003,7 @@ template {
     top: 26px;
   }
 }
+/* ORDINATEUR */
 @media screen and (min-width: 992px) {
   .site {
     margin: auto;

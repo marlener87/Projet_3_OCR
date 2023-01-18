@@ -51,11 +51,14 @@
 
 .card-menu__description {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    //
+    flex-wrap: wrap;
 
     .description {
         margin-right: 20px;
-        width: calc(100% / 3 - 5px);
+        //width: calc(100% / 3 - 5px);
+        width: calc(43% - 5px);
 
         &__entitled {
             display: flex;
