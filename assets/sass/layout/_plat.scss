@@ -7,7 +7,7 @@
         &__title {
             white-space: nowrap;
             text-overflow: ellipsis;
-            overflow: hidden;
+            overflow: hidden; 
         }
 
         &__text {
@@ -55,6 +55,9 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        font-weight: 700;
+        display: block;
+        margin-top: 15px;
     }
 
     &__text {
@@ -62,6 +65,8 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        display: block;
+        margin: 15px 0;
     }
 
     .validation {

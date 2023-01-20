@@ -769,12 +769,17 @@ template {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  font-weight: 700;
+  display: block;
+  margin-top: 15px;
 }
 .description__text {
   padding-left: 5px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  display: block;
+  margin: 15px 0;
 }
 .description .validation {
   position: absolute;
@@ -882,6 +887,7 @@ template {
   padding: 10px 20px 50px 20px;
   z-index: 900;
   position: relative;
+  box-sizing: border-box;
 }
 .section-restos--taille {
   border-radius: 50px;
