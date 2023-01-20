@@ -679,7 +679,7 @@ template {
 }
 
 .header-container {
-  padding: 30px 15px 55px 15px;
+  padding: 30px 20px 55px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -687,11 +687,13 @@ template {
 }
 .header-container__title {
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
+  padding: 0 20px;
 }
 .header-container__text {
-  font-size: 18px;
+  font-size: 20px;
   margin-top: 0;
+  margin-bottom: 30px;
   text-align: center;
 }
 .header-container__button {
@@ -857,7 +859,7 @@ template {
 }
 .section-functioning .card-function__text {
   font-weight: 600;
-  padding: 0 10px;
+  padding: 0;
   margin: 25px 0;
 }
 .section-functioning .card-function .fa-solid {
@@ -877,7 +879,7 @@ template {
 }
 
 .section-restos {
-  padding: 10px 20px;
+  padding: 10px 20px 50px 20px;
   z-index: 900;
   position: relative;
 }
@@ -900,13 +902,12 @@ template {
   width: 100%;
 }
 
-/* CARD */
+/* CARD 
 .section-restos {
-  padding: 10px 20px;
-  z-index: 900;
-  position: relative;
-}
-
+    padding: 10px 20px;
+    z-index: 900;
+    position: relative;
+}*/
 .section-header {
   display: flex;
   justify-content: space-between;

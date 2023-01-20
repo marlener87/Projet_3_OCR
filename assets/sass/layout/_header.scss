@@ -30,7 +30,7 @@
 }
 
 .header-container {
-    padding: 30px 15px 55px 15px;
+    padding: 30px 20px 55px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,12 +38,14 @@
 
     &__title {
         text-align: center;
-        font-size: 25px;
+        font-size: 30px;
+        padding: 0 20px;
     }
 
     &__text {
-        font-size: 18px;
+        font-size: 20px;
         margin-top: 0;
+        margin-bottom: 30px;
         text-align: center;
     }
 
