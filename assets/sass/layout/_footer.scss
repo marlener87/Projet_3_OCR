@@ -24,3 +24,20 @@
         }
     }  
 }
+
+
+/* TABLETTE */
+@media screen and (min-width: 768px) {
+    .footer-list {
+        display: flex;
+        justify-content: space-between;
+    }   
+}
+
+
+/* ORDINATEUR */
+@media screen and (min-width: 992px) {
+    .footer-list {
+        padding-right: 100px !important;
+    } 
+}

@@ -60,3 +60,69 @@
         margin-top: -50px;
     }    
 }
+
+
+/* TABLETTE */
+@media screen and (min-width: 768px) {
+    .section-functioning {
+        .functioning__cards {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+    
+            .card-function {
+                padding: 10px 0;
+                position: relative;
+                width: calc(100% / 3 - 20px);
+    
+                &:last-child {
+                    margin-right: 0;
+                }
+    
+                .fa-solid {
+                    padding: 15px 30px;
+                }
+    
+                &__text {
+                    margin: 0;
+                    padding: 0 20px 0 0;
+                    position: absolute;
+                    left: 70px;
+                    top: 15px;
+                }
+            }
+        } 
+    }
+}
+
+
+
+@media screen and (min-width: 875px) {
+    .card-function__text {
+        top: 26px;
+    }
+}
+
+
+
+/* ORDINATEUR */
+@media screen and (min-width: 992px) {
+    .site {
+        margin: auto;
+        max-width: 1400px;
+        width: calc(100% - 30px);
+    }
+
+    .section-functioning {
+        .functioning__cards {
+            display: flex;
+            flex-direction: row;
+
+            .card-function {  
+                &__text {
+                    top: 25px;
+                }
+            }
+        } 
+    }
+}

@@ -628,6 +628,85 @@ template {
   font-weight: 800;
 }
 
+/* TABLETTE */
+@media screen and (min-width: 768px) {
+  .resto-header {
+    height: 500px;
+  }
+  .restos__title {
+    margin: 15px;
+  }
+  .restos__cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .restos__cards .resto-card {
+    margin: 15px;
+    width: 45%;
+  }
+  .card-menu__description {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .card-menu__description .description {
+    margin-right: 20px;
+    width: calc(43% - 5px);
+  }
+  .card-menu__description .description__entitled {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 10px;
+    width: calc(100% - 15px);
+  }
+  .card-menu__description .description:hover .description__entitled__price {
+    transform: translateX(0px);
+  }
+}
+/* ORDINATEUR */
+@media screen and (min-width: 992px) {
+  .resto-header {
+    overflow: hidden;
+    position: relative;
+  }
+  .resto-header .resto-container__imgResto {
+    position: absolute;
+    top: -150px;
+  }
+  .restos__title {
+    margin: 20px 0;
+  }
+  .restos__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .restos__cards .resto-card {
+    margin: 20px 0;
+    width: 30%;
+  }
+  .carte {
+    display: flex;
+  }
+  .card-menu {
+    width: 100%;
+  }
+  .card-menu__description {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-menu .description {
+    width: auto;
+  }
+  .card-menu .description__entitled {
+    flex-direction: row;
+  }
+  .card-menu .description:hover .description__entitled__price {
+    transform: translateX(-80px);
+  }
+}
 .footer {
   padding: 30px;
 }
@@ -651,6 +730,19 @@ template {
   padding-left: 5px;
 }
 
+/* TABLETTE */
+@media screen and (min-width: 768px) {
+  .footer-list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+/* ORDINATEUR */
+@media screen and (min-width: 992px) {
+  .footer-list {
+    padding-right: 100px !important;
+  }
+}
 .page-header {
   z-index: 700;
   position: relative;
@@ -894,53 +986,6 @@ template {
   margin-top: -50px;
 }
 
-.navbar__arrow {
-  position: absolute;
-  top: 25px;
-}
-
-.fa-arrow-left {
-  font-size: 20px;
-}
-
-/* HEADER */
-.resto-container__imgResto {
-  width: 100%;
-}
-
-/* CARD 
-.section-restos {
-    padding: 10px 20px;
-    z-index: 900;
-    position: relative;
-}*/
-.section-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-/* Menu de la carte */
-.card-menu {
-  margin-bottom: 50px;
-}
-
-.card-menu__header {
-  position: relative;
-}
-.card-menu__header::before {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 50px;
-  height: 4px;
-  background-color: #99e2d0;
-}
-
-.card-menu__title {
-  font-weight: 300;
-}
-
 /* TABLETTE */
 @media screen and (min-width: 768px) {
   .section-functioning .functioning__cards {
@@ -966,44 +1011,6 @@ template {
     left: 70px;
     top: 15px;
   }
-  .resto-header {
-    height: 500px;
-  }
-  .restos__title {
-    margin: 15px;
-  }
-  .restos__cards {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .restos__cards .resto-card {
-    margin: 15px;
-    width: 45%;
-  }
-  .card-menu__description {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .card-menu__description .description {
-    margin-right: 20px;
-    width: calc(43% - 5px);
-  }
-  .card-menu__description .description__entitled {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: column;
-    margin-left: 10px;
-    width: calc(100% - 15px);
-  }
-  .card-menu__description .description:hover .description__entitled__price {
-    transform: translateX(0px);
-  }
-  .footer-list {
-    display: flex;
-    justify-content: space-between;
-  }
 }
 @media screen and (min-width: 875px) {
   .card-function__text {
@@ -1024,48 +1031,46 @@ template {
   .section-functioning .functioning__cards .card-function__text {
     top: 25px;
   }
-  .resto-header {
-    overflow: hidden;
-    position: relative;
-  }
-  .resto-header .resto-container__imgResto {
-    position: absolute;
-    top: -150px;
-  }
-  .restos__title {
-    margin: 20px 0;
-  }
-  .restos__cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .restos__cards .resto-card {
-    margin: 20px 0;
-    width: 30%;
-  }
-  .carte {
-    display: flex;
-  }
-  .card-menu {
-    width: 100%;
-  }
-  .card-menu__description {
-    display: flex;
-    flex-direction: column;
-  }
-  .card-menu .description {
-    width: auto;
-  }
-  .card-menu .description__entitled {
-    flex-direction: row;
-  }
-  .card-menu .description:hover .description__entitled__price {
-    transform: translateX(-80px);
-  }
-  .footer-list {
-    padding-right: 100px !important;
-  }
+}
+.navbar__arrow {
+  position: absolute;
+  top: 25px;
+}
+
+.fa-arrow-left {
+  font-size: 20px;
+}
+
+/* HEADER */
+.resto-container__imgResto {
+  width: 100%;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Menu de la carte */
+.card-menu {
+  margin-bottom: 50px;
+}
+
+.card-menu__header {
+  position: relative;
+}
+.card-menu__header::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background-color: #99e2d0;
+}
+
+.card-menu__title {
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=main.css.map */

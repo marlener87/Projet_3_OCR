@@ -1,6 +1,6 @@
 /* TABLETTE */
 @media screen and (min-width: 768px) {
-    .section-functioning {
+    /*.section-functioning {
         .functioning__cards {
             display: flex;
             flex-direction: row;
@@ -75,99 +75,99 @@
                 }
             }
         }
-    }
+    }*/
     
     
-    .footer-list {
+    /*.footer-list {
         display: flex;
         justify-content: space-between;
-    }    
+    }    */
 }
     
     
 
-@media screen and (min-width: 875px) {
+/*@media screen and (min-width: 875px) {
     .card-function__text {
         top: 26px;
     }
-}
+}*/
 
 
 
 /* ORDINATEUR */
 @media screen and (min-width: 992px) {
-    .site {
+    /*.site {
         margin: auto;
         max-width: 1400px;
         width: calc(100% - 30px);
     }
 
-.section-functioning {
-    .functioning__cards {
-        display: flex;
-        flex-direction: row;
-
-        .card-function {  
-            &__text {
-                top: 25px;
-            }
-        }
-    } 
-}
-
-.resto-header {
-    overflow: hidden;
-    position: relative;
-
-    .resto-container__imgResto {
-        position: absolute;
-        top: -150px;
-    }
-}
-
-.restos__title {
-    margin: 20px 0;
-}
-
-.restos__cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
-    .resto-card {
-        margin: 20px 0;
-        width: 30%;
-    }
-}
-
-.carte {
-    display: flex;
-}
-
-.card-menu {
-    width: 100%;
-    &__description {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .description {
-        width: auto;
-
-        &__entitled {
+    .section-functioning {
+        .functioning__cards {
+            display: flex;
             flex-direction: row;
-        }
 
-        &:hover {
-            .description__entitled__price {
-                transform: translateX(-80px);
+            .card-function {  
+                &__text {
+                    top: 25px;
+                }
             }
+        } 
+    }*/
+
+    /*.resto-header {
+        overflow: hidden;
+        position: relative;
+
+        .resto-container__imgResto {
+            position: absolute;
+            top: -150px;
         }
     }
-}
 
-.footer-list {
-    padding-right: 100px !important;
-}   
+    .restos__title {
+        margin: 20px 0;
+    }
+
+    .restos__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        .resto-card {
+            margin: 20px 0;
+            width: 30%;
+        }
+    }
+
+    .carte {
+        display: flex;
+    }
+
+    .card-menu {
+        width: 100%;
+        &__description {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .description {
+            width: auto;
+
+            &__entitled {
+                flex-direction: row;
+            }
+
+            &:hover {
+                .description__entitled__price {
+                    transform: translateX(-80px);
+                }
+            }
+        }
+    }*/
+
+    /*.footer-list {
+        padding-right: 100px !important;
+    }   */
 
 }

@@ -45,3 +45,114 @@
         }
     } 
 }  
+
+
+
+
+/* TABLETTE */
+@media screen and (min-width: 768px) {
+    .resto-header {
+        height: 500px;
+    }
+    
+    .restos__title {
+        margin: 15px;
+    }
+    
+    .restos__cards {
+        display: flex;
+        flex-wrap: wrap;
+    
+        .resto-card {
+            margin: 15px;
+            width: 45%;
+        }
+    }
+
+    .card-menu__description {
+        display: flex;
+        justify-content: center;
+        //
+        flex-wrap: wrap;
+    
+        .description {
+            margin-right: 20px;
+            //width: calc(100% / 3 - 5px);
+            width: calc(43% - 5px);
+    
+            &__entitled {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                flex-direction: column;
+                margin-left: 10px;
+                width: calc(100% - 15px);
+               
+            }
+    
+            &:hover {
+                .description__entitled__price {
+                    transform: translateX(0px);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/* ORDINATEUR */
+@media screen and (min-width: 992px) {
+    .resto-header {
+        overflow: hidden;
+        position: relative;
+    
+        .resto-container__imgResto {
+            position: absolute;
+            top: -150px;
+        }
+    }
+    
+    .restos__title {
+        margin: 20px 0;
+    }
+    
+    .restos__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        .resto-card {
+            margin: 20px 0;
+            width: 30%;
+        }
+    }
+
+    .carte {
+        display: flex;
+    }
+
+    .card-menu {
+        width: 100%;
+        &__description {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .description {
+            width: auto;
+
+            &__entitled {
+                flex-direction: row;
+            }
+
+            &:hover {
+                .description__entitled__price {
+                    transform: translateX(-80px);
+                }
+            }
+        }
+    }
+}
