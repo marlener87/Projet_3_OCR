@@ -26,7 +26,7 @@
 
     /* */
     &:hover {
-        color: purple;
+        color: $color-purple;
         transform: rotate(-360deg);
         transition: ease-in-out .8s .3s;
     }

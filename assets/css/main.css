@@ -1069,7 +1069,7 @@ template {
   /* */
 }
 .fa-arrow-left:hover {
-  color: purple;
+  color: #9356DC;
   transform: rotate(-360deg);
   transition: ease-in-out 0.8s 0.3s;
 }
