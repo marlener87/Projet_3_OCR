@@ -593,6 +593,20 @@ template {
   margin: 25px 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+  /* La transition s'applique à la fois sur la largeur et la hauteur, avec une durée d'une seconde. */
+  -webkit-transition: all 1s ease; /* Safari et Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* Internet Explorer 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+}
+.resto-card:hover {
+  /* L'image est grossie de 15% */
+  -webkit-transform: scale(1.1); /* Safari et Chrome */
+  -moz-transform: scale(1.1); /* Firefox */
+  -ms-transform: scale(1.1); /* Internet Explorer 9 */
+  -o-transform: scale(1.1); /* Opera */
+  transform: scale(1.1);
 }
 .resto-card__img {
   height: 200px;
@@ -1037,8 +1051,27 @@ template {
   top: 25px;
 }
 
+.arrow_anchor:hover {
+  transition: transform 0.5s ease-out;
+  animation: validation 1s forwards;
+  transform: translateX(0px);
+}
+.arrow_anchor:hover:hover .fa-arrow-left {
+  transform: rotate(-360deg);
+  transition: ease-in-out 0.8s 0.3s;
+}
+
 .fa-arrow-left {
   font-size: 20px;
+  /* 
+  transform: rotate(-360deg); */
+  transition: ease-in-out 0.5s 0.5s;
+  /* */
+}
+.fa-arrow-left:hover {
+  color: purple;
+  transform: rotate(-360deg);
+  transition: ease-in-out 0.8s 0.3s;
 }
 
 /* HEADER */
